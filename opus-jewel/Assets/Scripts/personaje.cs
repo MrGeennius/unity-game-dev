@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class personaje : MonoBehaviour
 {
-     public float velocidadMovimiento = 1f;
-     private Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private Transform Posicion; 
+    [Header("Movimiento")]
+    [SerializeField] private float velocidadMovimiento = 1f;
+    [Header("Disparo")]
+    [SerializeField] private float tiempoDisparo=1f;
+    [SerializeField] private float proximoDisparo=1f,veldisparo=1f;
+     
+     [Header("Objetos")]
      public GameObject Bala;
      private GameObject bala;
-     private Transform Posicion; 
      public Transform PuntoDisparoArriba;
      public Transform PuntoDisparoAbajo;
      public Transform PuntoDisparoIzquierda;
@@ -19,12 +25,11 @@ public class personaje : MonoBehaviour
      public Transform PuntoDisparoAbajoDerecha;
      private Transform PuntoDisparo;
      private Vector2 direccionDisparo;
-
-     public float veldisparo=1f;
-     public float tiempoDisparo=1f, proximoDisparo=1f;
+    
     // Start is called before the first frame update
     void Start()
     {
+        PuntoDisparo = PuntoDisparoArriba;
         rb = GetComponent<Rigidbody2D>();
     }
 
