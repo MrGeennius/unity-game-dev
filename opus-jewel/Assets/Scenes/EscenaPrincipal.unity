@@ -456,7 +456,7 @@ MonoBehaviour:
   PuntoDisparoArribaDerecha: {fileID: 236326641}
   PuntoDisparoAbajoIzquierda: {fileID: 863489389}
   PuntoDisparoAbajoDerecha: {fileID: 1849117961}
-  veldisparo: 50
+  veldisparo: 10
   tiempoDisparo: 1
   proximoDisparo: 1
 --- !u!58 &405527327
