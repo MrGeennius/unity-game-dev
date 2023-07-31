@@ -9,7 +9,16 @@ public class personaje : MonoBehaviour
      public GameObject Bala;
      private GameObject bala;
      private Transform Posicion; 
-     public Transform PuntoDisparo;
+     public Transform PuntoDisparoArriba;
+     public Transform PuntoDisparoAbajo;
+     public Transform PuntoDisparoIzquierda;
+     public Transform PuntoDisparoDerecha;
+     public Transform PuntoDisparoArribaIzquierda;
+     public Transform PuntoDisparoArribaDerecha;
+     public Transform PuntoDisparoAbajoIzquierda;
+     public Transform PuntoDisparoAbajoDerecha;
+     private Transform PuntoDisparo;
+     private Vector2 direccionDisparo;
 
      public float veldisparo=1f;
      public float tiempoDisparo=1f, proximoDisparo=1f;
@@ -34,13 +43,68 @@ public class personaje : MonoBehaviour
             proximoDisparo=Time.time+tiempoDisparo;
         }
         //FIN DISPARO
-    }
 
-    void Disparo(){
-            bala = Instantiate(Bala, PuntoDisparo.position, Quaternion.identity);
-            bala.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,1)*veldisparo);
+    }
+    
+    void Disparo()
+    {
+        // Obtener la dirección del disparo basada en la posición del mouse
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = -Camera.main.transform.position.z;
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2 direccionDisparo = (worldMousePosition - (Vector3)transform.position).normalized;
+
+        // Redondear los valores del vector de dirección a múltiplos de 45 grados
+        float angle = Mathf.Atan2(direccionDisparo.y, direccionDisparo.x) * Mathf.Rad2Deg;
+        int roundedAngle = Mathf.RoundToInt(angle / 45f) * 45;
+        float roundedAngleRad = roundedAngle * Mathf.Deg2Rad;
+        direccionDisparo = new Vector2(Mathf.Cos(roundedAngleRad), Mathf.Sin(roundedAngleRad));
+
+        // Selecionar el punto de disparo correspondiente a la dirección redondeada
+        if (direccionDisparo == Vector2.up)
+        {
+            PuntoDisparo = PuntoDisparoArriba;
+        }
+        else if (direccionDisparo == Vector2.down)
+        {
+            PuntoDisparo = PuntoDisparoAbajo;
+        }
+        else if (direccionDisparo == Vector2.left)
+        {
+            PuntoDisparo = PuntoDisparoIzquierda;
+        }
+        else if (direccionDisparo == Vector2.right)
+        {
+            PuntoDisparo = PuntoDisparoDerecha;
+        }
+        else if (direccionDisparo == new Vector2(1, 1).normalized)
+        {
+            PuntoDisparo = PuntoDisparoArribaDerecha;
+        }
+        else if (direccionDisparo == new Vector2(-1, 1).normalized)
+        {
+            PuntoDisparo = PuntoDisparoArribaIzquierda;
+        }
+        else if (direccionDisparo == new Vector2(1, -1).normalized)
+        {
+            PuntoDisparo = PuntoDisparoAbajoDerecha;
+        }
+        else if (direccionDisparo == new Vector2(-1, -1).normalized)
+        {
+            PuntoDisparo = PuntoDisparoAbajoIzquierda;
         }
 
-    private void FixedUpdate(){
+        // Aquí agregamos un ajuste a la posición del punto de disparo según la dirección del disparo
+        PuntoDisparo.localPosition = direccionDisparo;
+
+        // Crear la bala en la posición del punto de disparo
+        bala = Instantiate(Bala, PuntoDisparo.position, Quaternion.identity);
+
+        // Obtener el componente Rigidbody2D de la bala
+        Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
+
+        // Aplicar una fuerza para disparar la bala en la dirección adecuada
+        rbBala.AddForce(direccionDisparo * veldisparo, ForceMode2D.Impulse);
     }
+
 }
