@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour
 {
+    [SerializeField] private float fuerzaRetroceso = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,12 @@ public class Proyectil : MonoBehaviour
             if (enemigo != null)
             {
                 enemigo.RecibirGolpe();
+            }
+            Rigidbody2D rbEnemigo = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (rbEnemigo != null)
+            {
+                Vector2 direccionRetroceso = (rbEnemigo.position - (Vector2)transform.position).normalized;
+                rbEnemigo.AddForce(direccionRetroceso * fuerzaRetroceso, ForceMode2D.Impulse);
             }
 
             // Destruimos el proyectil

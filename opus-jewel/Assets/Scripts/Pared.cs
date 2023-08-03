@@ -17,7 +17,7 @@ public class Pared : MonoBehaviour
     }
     
     private void OnCollisionEnter2D(Collision2D collision){
-    if (collision.gameObject.tag != "Pared" && collision.gameObject.tag != "Entidades" && collision.gameObject.tag != "Enemigo")
+    if (collision.gameObject.tag == "Proyectil")
     {
         Destroy(collision.gameObject);
     }
