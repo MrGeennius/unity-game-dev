@@ -11,6 +11,7 @@ public class personaje : MonoBehaviour
     [Header("Disparo")]
     [SerializeField] private float tiempoDisparo=1f;
     [SerializeField] private float proximoDisparo=1f,veldisparo=1f;
+    
      
      [Header("Objetos")]
      public GameObject Bala;
@@ -26,9 +27,15 @@ public class personaje : MonoBehaviour
      private Transform PuntoDisparo;
      private Vector2 direccionDisparo;
     
+    [Header("Vida")]
+    [SerializeField] private int vidasMaximas = 3;
+    private int vidasActuales;
+    
     // Start is called before the first frame update
     void Start()
     {
+        //INICIALZIAR COMPONENTES
+        vidasActuales = vidasMaximas;
         PuntoDisparo = PuntoDisparoArriba;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -50,7 +57,19 @@ public class personaje : MonoBehaviour
         //FIN DISPARO
 
     }
-    
+    public void RecibirGolpe()
+    {
+        vidasActuales--;
+
+        if (vidasActuales <= 0)
+        {
+            Morir();
+        }
+    }
+    private void Morir()
+    {
+        Destroy(gameObject);
+    }
     void Disparo()
     {
         // Obtener la dirección del disparo basada en la posición del mouse

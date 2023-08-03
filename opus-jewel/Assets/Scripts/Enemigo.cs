@@ -9,6 +9,10 @@ public class Enemigo : MonoBehaviour
     private Rigidbody2D rb;
     private Transform jugador;
 
+    [Header("Velocidad Golpes")]
+    [SerializeField] private float tiempoGolpe=1f;
+    [SerializeField] private float proximoGolpe=1f;
+
     void Start()
     {
         vidasActuales = vidasMaximas;
@@ -34,7 +38,21 @@ public class Enemigo : MonoBehaviour
             DestruirEnemigo();
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Jugador") && Time.time > proximoGolpe)
+        {
+            // Obtener el script del jugador y restarle vidas
+            personaje jugador = collision.gameObject.GetComponent<personaje>();
+            if (jugador != null)
+            {
+                jugador.RecibirGolpe();
+            }
 
+            // Establecer el tiempo para el próximo golpe
+            proximoGolpe = Time.time + tiempoGolpe;
+        }
+    }
     private void DestruirEnemigo()
     {
         Destroy(gameObject);
