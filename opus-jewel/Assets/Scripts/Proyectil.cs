@@ -29,6 +29,7 @@ public class Proyectil : MonoBehaviour
             {
                 enemigo.RecibirGolpe();
             }
+            // Aplicamos fuerza de retroceso al enemigo para que se mueva hacia atrás
             Rigidbody2D rbEnemigo = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rbEnemigo != null)
             {
