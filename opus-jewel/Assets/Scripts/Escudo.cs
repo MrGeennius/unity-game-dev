@@ -7,10 +7,10 @@ public class Escudo : MonoBehaviour
     public Transform jugador;
     public float fuerzaEmpujar = 10f;
     public float duracionActiva = 2f;
-    private float tiempoEnfriamiento = 4f;
+    [SerializeField] private float tiempoEnfriamiento = 4f;
     private float tiempoInicioEnfriamiento = 0f;
-    private bool puedeActivar = true;
     public bool activado = false;
+    private int primerEscudo = 0;
 
     private void Start()
     {
@@ -28,39 +28,29 @@ public class Escudo : MonoBehaviour
             }
             transform.position = jugador.position;
         }
-        // Verificar si ha pasado el tiempo de enfriamiento
-        if (Time.time >= tiempoInicioEnfriamiento + tiempoEnfriamiento)
-        {
-        puedeActivar = true;
-        Debug.Log("Escudo enfriado en el script del escudo");
-        }
         
     }
 
     public void ActivarEscudo()
     {
-        if (puedeActivar)
+        if (!activado && (Time.time >= tiempoInicioEnfriamiento + tiempoEnfriamiento || primerEscudo==0))
         {
-            puedeActivar = false;
             activado = true;
-            
-            duracionActiva = 2f; // Establecer la duración activa inicial del escudo
-            
-
+            primerEscudo=1;
             // Crear una nueva instancia del escudo
             gameObject.SetActive(true); // Activar el objeto del escudo actual
-            
             transform.position = jugador.position; // Establecer la posición del escudo igual a la del jugador
             // Actualizar el tiempo de inicio del enfriamiento
             tiempoInicioEnfriamiento = Time.time;
-            
+            duracionActiva = 2f; // Establecer la duración activa inicial del escudo
+            Debug.Log("Escudo enfriado en el script del escudo");            
         }
-        else{
-            Debug.Log("tiempo Inicio + tiempo Enfriamiento : "+ tiempoInicioEnfriamiento + tiempoEnfriamiento);
-            Debug.Log(Time.time >= tiempoInicioEnfriamiento + tiempoEnfriamiento);
-        }
+            // Debug.Log(Time.time >= tiempoInicioEnfriamiento + tiempoEnfriamiento);
+            // Debug.Log("Time.time: "+ Time.time);
+            // Debug.Log("Tiempo Inicio: " + tiempoInicioEnfriamiento);
+            // Debug.Log("Tiempo Enfriamiento: " + tiempoEnfriamiento);
+            // Debug.Log("tiempo Inicio + tiempo Enfriamiento : "+ (tiempoInicioEnfriamiento + tiempoEnfriamiento));
     }
-
     private void DesactivarEscudo()
     {
         activado = false;
@@ -90,7 +80,7 @@ public class Escudo : MonoBehaviour
         Rigidbody2D rbObjeto = objeto.GetComponent<Rigidbody2D>();
         if (rbObjeto != null)
         {
-            rbObjeto.AddForce(direccion.normalized * 10f, ForceMode2D.Impulse);
+            rbObjeto.AddForce(direccion.normalized * fuerzaEmpujar, ForceMode2D.Impulse);
         }
     }
 }
