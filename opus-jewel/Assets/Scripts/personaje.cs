@@ -39,12 +39,17 @@ public class personaje : MonoBehaviour
     private int vidasActuales;
     public TMP_Text textoVidas;
 
+    //REFERENCIAS
+    private GameObject escudo; // Referencia al objeto del escudo
+    public GameObject escudoObject;
+    private Escudo escudoScript; // Referencia al script del escudo
 
     //Limites de pared
     private float limiteAbajo=-4.485f;
     private float limiteArriba=4.485f;
-    private float limiteIzquierdo=-8.485f;
-    private float limiteDerecho=8.485f;
+    //8.485
+    private float limiteIzquierdo=-8.556f;
+    private float limiteDerecho=8.556f;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,11 +59,16 @@ public class personaje : MonoBehaviour
         textoVidas.text = vidasActuales.ToString();
         PuntoDisparo = PuntoDisparoArriba;
         rb = GetComponent<Rigidbody2D>();
+
+        //ESCUDO
+        escudoScript = escudoObject.GetComponent<Escudo>();
+        escudoScript.jugador = transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         // INICIO MOVIMIENTO JUGADOR
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
@@ -82,7 +92,24 @@ public class personaje : MonoBehaviour
         }
         //FIN DISPARO
 
+        //ESCUDO
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+            ActivarEscudo();
+        }
+        //FIN ESCUDO
     }
+
+    private void ActivarEscudo()
+    {
+        if (!escudoScript.activado)
+        {
+            escudoScript.ActivarEscudo();
+            Debug.Log("Escudo activado con espacio a traves del personaje");
+        }
+    }
+
     public void RecibirGolpe()
     {
         if (!esInvulnerable) // Verificar si el personaje es vulnerable

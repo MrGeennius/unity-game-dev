@@ -319,9 +319,12 @@ GameObject:
   m_Component:
   - component: {fileID: 176252584}
   - component: {fileID: 176252583}
-  m_Layer: 0
+  - component: {fileID: 176252587}
+  - component: {fileID: 176252586}
+  - component: {fileID: 176252585}
+  m_Layer: 9
   m_Name: Escudo
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,7 +371,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.24705881, g: 1, b: 0.6817519, a: 0.21176471}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -385,14 +388,67 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176252582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.5, y: -2.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.529999, y: 1.0599998, z: -0.5}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 405527330}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176252585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176252582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0d2a035602ede4aa3313b477d5d385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 405527330}
+  fuerzaEmpujar: 20
+  duracionActiva: 2
+  activado: 0
+--- !u!50 &176252586
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176252582}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!58 &176252587
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176252582}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &236326640
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 236326641}
   - component: {fileID: 236326642}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Arriba_Derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,9 +681,9 @@ GameObject:
   - component: {fileID: 405527330}
   - component: {fileID: 405527329}
   - component: {fileID: 405527328}
-  - component: {fileID: 405527327}
   - component: {fileID: 405527326}
-  m_Layer: 6
+  - component: {fileID: 405527331}
+  m_Layer: 8
   m_Name: Jugador
   m_TagString: Jugador
   m_Icon: {fileID: 0}
@@ -664,22 +720,7 @@ MonoBehaviour:
   esInvulnerable: 0
   vidasMaximas: 6
   textoVidas: {fileID: 1111557890}
---- !u!58 &405527327
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405527325}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  escudoObject: {fileID: 176252582}
 --- !u!50 &405527328
 Rigidbody2D:
   serializedVersion: 4
@@ -761,7 +802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405527325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.500002, y: -4.5, z: 0.50000006}
+  m_LocalPosition: {x: 3.5, y: -3.5, z: 0.50000006}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -773,9 +814,46 @@ Transform:
   - {fileID: 236326641}
   - {fileID: 1849117961}
   - {fileID: 863489389}
+  - {fileID: 176252584}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &405527331
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405527325}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3373728, y: 0.5}
+      - {x: 0.030284844, y: 0.47352004}
+      - {x: -0.12296586, y: 0.39367914}
+      - {x: -0.2394562, y: 0.2757244}
+      - {x: -0.4336896, y: -0.046761025}
+      - {x: -0.43259668, y: -0.48327923}
+      - {x: -0.3716383, y: -0.49380207}
+      - {x: 0.013572632, y: -0.49344718}
+      - {x: 0.4306221, y: -0.496912}
+      - {x: 0.42179477, y: -0.19338408}
+      - {x: 0.4035387, y: 0.4343524}
 --- !u!1 &502086463
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,10 +904,10 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 12}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 0
+    drawMode: 0
+    adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
@@ -875,14 +953,14 @@ SpriteRenderer:
   m_SortingLayerID: -1204560057
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0e8f90e2fe0d9c64c84288e579a0e820, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2da705d7e2d0494c9c7d84c6ec5535c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
-  m_Size: {x: 1, y: 12}
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -895,7 +973,7 @@ Transform:
   m_GameObject: {fileID: 502086463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.6625295, y: 2.5248008, z: 0.27101594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677035424}
@@ -972,10 +1050,10 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 20, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 0
+    drawMode: 0
+    adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
@@ -1020,15 +1098,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1204560057
   m_SortingLayer: -1
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0e8f90e2fe0d9c64c84288e579a0e820, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: f2da705d7e2d0494c9c7d84c6ec5535c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
-  m_Size: {x: 20, y: 1}
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -1039,14 +1117,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514467035}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -3.8374705, y: 8.024801, z: 0.27101594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677035424}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!50 &514467040
 Rigidbody2D:
   serializedVersion: 4
@@ -1146,7 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734909112}
   - component: {fileID: 734909113}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Arriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1275,7 +1353,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &751179104
 SpriteRenderer:
@@ -1337,7 +1415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751179100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.987453, y: 2.8455973, z: -8.481317}
+  m_LocalPosition: {x: -18.84, y: 2.8455973, z: -8.481317}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1453,7 +1531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855099829}
   - component: {fileID: 855099830}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1537,7 +1615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863489389}
   - component: {fileID: 863489390}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Abajo_Izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,7 +2085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1266615486}
   - component: {fileID: 1266615487}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Abajo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2139,7 +2217,7 @@ SpriteRenderer:
   m_SortingLayerID: -1204560057
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d822ddc98359a234bb17743f33bd303f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ec2541c0c339ad4f883650c56ac3ff7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2175,7 +2253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393222072}
   - component: {fileID: 1393222073}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,7 +2532,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1584682014
 SpriteRenderer:
@@ -2516,7 +2594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584682010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9874535, y: 3.8455973, z: -8.481317}
+  m_LocalPosition: {x: -16.880001, y: 3.8455973, z: -8.481317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2533,7 +2611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592734351}
   - component: {fileID: 1592734352}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Arriba_Izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,14 +2785,14 @@ SpriteRenderer:
   m_SortingLayerID: -1204560057
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0e8f90e2fe0d9c64c84288e579a0e820, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2da705d7e2d0494c9c7d84c6ec5535c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
-  m_Size: {x: 1, y: 12}
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -2727,7 +2805,7 @@ Transform:
   m_GameObject: {fileID: 1712003561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.337471, y: 2.5248008, z: 0.27101594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677035424}
@@ -2751,10 +2829,10 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 12}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 0
+    drawMode: 0
+    adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
@@ -2842,10 +2920,10 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 20, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 0
+    drawMode: 0
+    adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
@@ -2891,14 +2969,14 @@ SpriteRenderer:
   m_SortingLayerID: -1204560057
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0e8f90e2fe0d9c64c84288e579a0e820, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2da705d7e2d0494c9c7d84c6ec5535c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
-  m_Size: {x: 20, y: 1}
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -2909,14 +2987,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755922341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -3.83747, y: -2.975199, z: 0.27101594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677035424}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!50 &1755922346
 Rigidbody2D:
   serializedVersion: 4
@@ -2948,7 +3026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849117961}
   - component: {fileID: 1849117962}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Punto_Disparo_Abajo_Derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}

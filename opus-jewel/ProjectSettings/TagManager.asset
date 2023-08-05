@@ -9,6 +9,8 @@ TagManager:
   - Enemigo
   - Jugador
   - Proyectil
+  - ProyectilEnemigo
+  - Escudo
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Personajes
   - Enemigo
   - Jugador
-  - 
+  - Escudo
   - 
   - 
   - 
