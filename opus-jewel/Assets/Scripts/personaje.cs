@@ -46,11 +46,11 @@ public class personaje : MonoBehaviour
     private Escudo escudoScript; // Referencia al script del escudo
 
     //Limites de pared
-    private float limiteAbajo=-4.485f;
-    private float limiteArriba=4.485f;
+    private float limiteAbajo=-4.490f;
+    private float limiteArriba=4.490f;
     //8.485
-    private float limiteIzquierdo=-8.556f;
-    private float limiteDerecho=8.556f;
+    private float limiteIzquierdo=-8.685f;
+    private float limiteDerecho=8.685f;
 
     private bool estaMoviendo = false;
     // Start is called before the first frame update
