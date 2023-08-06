@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class personaje : MonoBehaviour
 {
@@ -145,7 +146,7 @@ public class personaje : MonoBehaviour
 
     private void Morir()
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene("Juego");
     }
     void Disparo()
     {

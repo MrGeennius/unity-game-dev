@@ -413,6 +413,7 @@ MonoBehaviour:
   duracionActiva: 2
   tiempoEnfriamiento: 10
   activado: 0
+  cantidadBloqueos: 3
 --- !u!50 &176252586
 Rigidbody2D:
   serializedVersion: 4
@@ -547,7 +548,7 @@ GameObject:
   - component: {fileID: 242670013}
   - component: {fileID: 242670012}
   - component: {fileID: 242670015}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Proyectil_Base
   m_TagString: Proyectil
   m_Icon: {fileID: 0}
@@ -684,6 +685,7 @@ GameObject:
   - component: {fileID: 405527328}
   - component: {fileID: 405527326}
   - component: {fileID: 405527331}
+  - component: {fileID: 405527332}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Jugador
@@ -784,12 +786,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ed0d8c50fd129b445bd5b51ced77178e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e5dcdd7f49962448bdf5b4f4dc70c07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -826,7 +828,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405527325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -837,7 +839,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.32, y: 0.32}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -855,6 +857,32 @@ PolygonCollider2D:
       - {x: 0.4306221, y: -0.496912}
       - {x: 0.42179477, y: -0.19338408}
       - {x: 0.4035387, y: 0.4343524}
+--- !u!61 &405527332
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405527325}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.61, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &502086463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1517,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 26.991467
   orthographic: 1
   orthographic size: 6
   m_Depth: -1
@@ -1859,7 +1887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -179, y: 130.7}
+  m_AnchoredPosition: {x: -294, y: 195}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111557890
@@ -2363,7 +2391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 174}
+  m_AnchoredPosition: {x: 616, y: 10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553657741
@@ -3220,7 +3248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: -215}
+  m_AnchoredPosition: {x: 17, y: -314}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993478594

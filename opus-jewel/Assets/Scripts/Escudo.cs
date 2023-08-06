@@ -10,11 +10,14 @@ public class Escudo : MonoBehaviour
     [SerializeField] private float tiempoEnfriamiento = 4f;
     private float tiempoInicioEnfriamiento = 0f;
     public bool activado = false;
-    private int primerEscudo = 0;
+    private int primerEscudo = 0; // booleano
+    public int cantidadBloqueos = 3; 
+    private int bloqueosRestantes; //Contador
 
     private void Start()
     {
         DesactivarEscudo(); // Desactivar el escudo original al inicio
+        bloqueosRestantes = cantidadBloqueos;
     }
 
     private void Update()
@@ -28,6 +31,10 @@ public class Escudo : MonoBehaviour
             }
             transform.position = jugador.position;
         }
+        if (bloqueosRestantes > 0 && Time.time >= tiempoInicioEnfriamiento + tiempoEnfriamiento)
+        {
+            Debug.Log("Se recuperó un bloqueo. Bloqueos restantes: " + bloqueosRestantes);
+        }
         
     }
 
@@ -37,6 +44,7 @@ public class Escudo : MonoBehaviour
         {
             activado = true;
             primerEscudo=1;
+            bloqueosRestantes = cantidadBloqueos;
             // Crear una nueva instancia del escudo
             gameObject.SetActive(true); // Activar el objeto del escudo actual
             transform.position = jugador.position; // Establecer la posición del escudo igual a la del jugador
@@ -45,12 +53,12 @@ public class Escudo : MonoBehaviour
             duracionActiva = 2f; // Establecer la duración activa inicial del escudo
             Debug.Log("Escudo enfriado en el script del escudo");            
         }
+    }
             // Debug.Log(Time.time >= tiempoInicioEnfriamiento + tiempoEnfriamiento);
             // Debug.Log("Time.time: "+ Time.time);
             // Debug.Log("Tiempo Inicio: " + tiempoInicioEnfriamiento);
             // Debug.Log("Tiempo Enfriamiento: " + tiempoEnfriamiento);
             // Debug.Log("tiempo Inicio + tiempo Enfriamiento : "+ (tiempoInicioEnfriamiento + tiempoEnfriamiento));
-    }
     private void DesactivarEscudo()
     {
         activado = false;
@@ -65,8 +73,14 @@ public class Escudo : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("ProyectilEnemigo"))
         {
             Debug.Log("Colisión con enemigo o proyectil enemigo");
+            bloqueosRestantes--;
             EmpujarObjeto(collision.gameObject);
-            DesactivarEscudo();
+            
+            if(bloqueosRestantes<=0)
+            {
+                DesactivarEscudo();
+            }
+            Debug.Log("Bloqueos restantes: " + bloqueosRestantes);
         }
     }
     }
