@@ -51,6 +51,8 @@ public class personaje : MonoBehaviour
     //8.485
     private float limiteIzquierdo=-8.556f;
     private float limiteDerecho=8.556f;
+
+    private bool estaMoviendo = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,8 @@ public class personaje : MonoBehaviour
         // INICIO MOVIMIENTO JUGADOR
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+
+        //BLOQUEO DE MOVIMIENTOS
         // Si el jugador está en una posición límite en el eje X, bloquear el movimiento horizontal
         if ((horizontalInput < 0 && transform.position.x <= limiteIzquierdo) || (horizontalInput > 0 && transform.position.x >= limiteDerecho))
         {
@@ -83,6 +87,7 @@ public class personaje : MonoBehaviour
         {
         verticalInput = 0;
         }
+
         Vector2 movement = new Vector2(horizontalInput, verticalInput) * velocidadMovimiento * Time.deltaTime;
         transform.Translate(movement);
         // FIN MOVIMIENTO JUGADOR
@@ -100,6 +105,23 @@ public class personaje : MonoBehaviour
             ActivarEscudo();
         }
         //FIN ESCUDO
+
+        // Verificar si el jugador se está moviendo
+        if(estaMoviendo = movement.magnitude > 0f){
+            gameObject.GetComponent<Animator>().SetBool("moviendose", true);
+        }
+        else{
+            gameObject.GetComponent<Animator>().SetBool("moviendose", false);
+        }
+        // Giro la animacion del personaje
+        if (horizontalInput < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (horizontalInput > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     private void ActivarEscudo()
