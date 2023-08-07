@@ -7,9 +7,12 @@ public class enemySpawner : MonoBehaviour
     private int cantidadMaximaSpawn=1;
     public GameObject enemyNormalPrefab;
     public GameObject enemyLargePrefab;
+    private salaManager manager;
+
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.FindObjectOfType<salaManager>();
         StartCoroutine(waves());
     }
 
@@ -25,7 +28,9 @@ public class enemySpawner : MonoBehaviour
         {
             Vector2 posicion = new Vector2(Random.Range(-10.5f, 3.5f), 4f);
                 Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+                manager.contadorBichos++;
                 Instantiate(enemyLargePrefab, posicion, Quaternion.identity);
+                manager.contadorBichos++;
             yield return new WaitForSecondsRealtime(1);
         }
     }

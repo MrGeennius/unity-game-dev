@@ -21,9 +21,12 @@ public class Enemigo : MonoBehaviour
     private float limiteDerecho=8.8f;
 
     private bool isOnMap = true;
+    private salaManager manager;
 
     void Start()
     {
+        manager = GameObject.FindObjectOfType<salaManager>();
+
         vidasActuales = vidasMaximas;
         jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<personaje>();
         rb = GetComponent<Rigidbody2D>();
@@ -106,5 +109,7 @@ public class Enemigo : MonoBehaviour
     private void DestruirEnemigo()
     {
         Destroy(gameObject);
+        manager.contadorBichos--;
+        manager.enemigoMuerto=true;
     }
 }
