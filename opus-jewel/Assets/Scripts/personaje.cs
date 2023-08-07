@@ -12,8 +12,11 @@ public class personaje : MonoBehaviour
     [Header("Movimiento")]
     [SerializeField] private float velocidadMovimiento = 1f;
     [Header("Disparo")]
-    [SerializeField] private float tiempoDisparo=1f;
-    [SerializeField] private float proximoDisparo=1f,veldisparo=1f;
+    [SerializeField] private float velocidadDisparo=1f;
+    [SerializeField] private float proximoDisparo=1f,velocidadBala=1f;
+    [SerializeField] private float rangoDisparo = 5f;
+    private float distanciaRecorrida = 0f; //Distancia recorrida de la bala
+    private Vector2 posicionInicialBala;
     
      
      [Header("Objetos")]
@@ -73,8 +76,8 @@ public class personaje : MonoBehaviour
     {
         
         // INICIO MOVIMIENTO JUGADOR
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal") ;
+        float verticalInput = Input.GetAxis("Vertical");
 
         //BLOQUEO DE MOVIMIENTOS
         // Si el jugador está en una posición límite en el eje X, bloquear el movimiento horizontal
@@ -94,7 +97,7 @@ public class personaje : MonoBehaviour
         // DISPARO
         if (Input.GetMouseButtonDown(0) && Time.time>proximoDisparo){
             Disparo();
-            proximoDisparo=Time.time+tiempoDisparo;
+            proximoDisparo=Time.time+velocidadDisparo;
         }
         //FIN DISPARO
 
@@ -228,7 +231,35 @@ public class personaje : MonoBehaviour
         Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
 
         // Aplicar una fuerza para disparar la bala en la dirección adecuada
-        rbBala.AddForce(direccionDisparo * veldisparo, ForceMode2D.Impulse);
+        rbBala.AddForce(direccionDisparo * velocidadBala, ForceMode2D.Impulse);
+
+        //Obtengo Posicion Inicial de la bala
+        posicionInicialBala = bala.transform.position;
+        // Inicializar corutina de rango de bala
+        StartCoroutine(ControlarRangoBala(rbBala));
     }
+
+    private IEnumerator ControlarRangoBala(Rigidbody2D rbBala)
+    {
+        distanciaRecorrida = 0f;
+
+        // Loop mientras la distancia recorrida sea menor o igual al rango de la bala
+        while (rbBala != null)
+        {
+        distanciaRecorrida = (posicionInicialBala - (Vector2)rbBala.transform.position).magnitude;
+        if (distanciaRecorrida > rangoDisparo)
+        {
+            Destroy(rbBala.gameObject);
+        }
+        yield return null;
+        }
+
+        if (rbBala != null)
+            {
+                Destroy(rbBala.gameObject);
+            }
+        
+    }
+
 
 }

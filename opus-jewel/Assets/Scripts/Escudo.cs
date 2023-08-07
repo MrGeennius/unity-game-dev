@@ -7,6 +7,7 @@ public class Escudo : MonoBehaviour
     public Transform jugador;
     public float fuerzaEmpujar = 10f;
     public float duracionActiva = 2f;
+    private float duracionActivaI = 0f;
     [SerializeField] private float tiempoEnfriamiento = 4f;
     private float tiempoInicioEnfriamiento = 0f;
     public bool activado = false;
@@ -16,6 +17,7 @@ public class Escudo : MonoBehaviour
 
     private void Start()
     {
+        duracionActivaI=duracionActiva;
         DesactivarEscudo(); // Desactivar el escudo original al inicio
         bloqueosRestantes = cantidadBloqueos;
     }
@@ -24,8 +26,8 @@ public class Escudo : MonoBehaviour
     {
         if (activado)
         {
-            duracionActiva -= Time.deltaTime;
-            if (duracionActiva <= 0)
+            duracionActivaI -= Time.deltaTime;
+            if (duracionActivaI <= 0)
             {
                 DesactivarEscudo();
             }
@@ -50,7 +52,7 @@ public class Escudo : MonoBehaviour
             transform.position = jugador.position; // Establecer la posición del escudo igual a la del jugador
             // Actualizar el tiempo de inicio del enfriamiento
             tiempoInicioEnfriamiento = Time.time;
-            duracionActiva = 2f; // Establecer la duración activa inicial del escudo
+            duracionActivaI = duracionActiva; // Establecer la duración activa inicial del escudo
             Debug.Log("Escudo enfriado en el script del escudo");            
         }
     }

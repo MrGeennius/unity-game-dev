@@ -38,7 +38,10 @@ public class Proyectil : MonoBehaviour
             }
 
             // Destruimos el proyectil
-            Destroy(gameObject);
-        }
+            if (gameObject != null)
+            {
+                Destroy(gameObject);
+            }
     }
+}
 }
