@@ -7,6 +7,8 @@ public class salaManager : MonoBehaviour
     public int contadorBichos = 0;
     public bool enemigoMuerto = false;
     private bool ganaste = false;
+    
+    public List<objetoManager> objetosConProbabilidades;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,28 @@ public class salaManager : MonoBehaviour
         if (contadorBichos == 0 && enemigoMuerto == true && ganaste == false)
         {
             Debug.Log("ganaste");
+            terminarSala();
             ganaste=true;
+        }
+    }
+    public void terminarSala()
+    {
+    // Generar un número aleatorio entre 0 y 1
+    float randomValue = Random.value;
+
+    // Recorrer la lista de objetos con probabilidades
+        foreach (objetoManager objetoProbabilidad in objetosConProbabilidades)
+        {
+        // Si el número aleatorio es menor o igual a la probabilidad del objeto, lo seleccionamos
+        if (randomValue <= objetoProbabilidad.probabilidad)
+        {
+            // Instanciar el objeto seleccionado
+            Instantiate(objetoProbabilidad.objeto, transform.position, Quaternion.identity);
+            break; // Salir del bucle, ya que ya hemos seleccionado un objeto
+        }
+
+        // Si el objeto no fue seleccionado, restar su probabilidad al número aleatorio y seguir buscando
+        randomValue -= objetoProbabilidad.probabilidad;
         }
     }
 }
