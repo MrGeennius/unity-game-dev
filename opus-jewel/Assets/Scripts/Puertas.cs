@@ -7,6 +7,8 @@ public class Puertas : MonoBehaviour
     public salaManager SalaManagerReference;
     public float tiempoEspera = 1.2f;
     public Transform puntoTeletransporte;
+    public Transform cameraTarget;
+    private float cameraMoveSpeed = 120f;
     void Start()
     {
         salaManager = SalaManagerReference; // Inicializa la referencia al script salaManager
@@ -30,9 +32,26 @@ public class Puertas : MonoBehaviour
                 PuertasManager.puedeTeletransportar = false;
                 collision.transform.position = puntoTeletransporte.transform.position;
                 salaManager.terminada = true;
-                Camera.main.transform.position = new Vector3(-22, 0, -10);
+                if (cameraTarget != null)
+                {
+                    StartCoroutine(MoveCameraSmoothly(cameraTarget.position));
+                }
                 StartCoroutine(HabilitarTeletransporte());
             }
+        }
+    }
+    private IEnumerator MoveCameraSmoothly(Vector3 targetPosition)
+    {
+        Vector3 initialPosition = Camera.main.transform.position;
+        float startTime = Time.time;
+        float distance = Vector3.Distance(initialPosition, targetPosition);
+
+        while (Camera.main.transform.position != targetPosition)
+        {
+            float elapsedTime = Time.time - startTime;
+            float t = Mathf.Clamp01(elapsedTime / (distance / cameraMoveSpeed));
+            Camera.main.transform.position = Vector3.Lerp(initialPosition, targetPosition, t);
+            yield return null;
         }
     }
     private IEnumerator HabilitarTeletransporte()

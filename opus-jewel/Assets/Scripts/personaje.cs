@@ -57,6 +57,7 @@ public class personaje : MonoBehaviour
     private GameObject escudo; // Referencia al objeto del escudo
     public GameObject escudoObject;
     private Escudo escudoScript; // Referencia al script del escudo
+    
 
     //Limites de pared
     // public bool limitar=false;

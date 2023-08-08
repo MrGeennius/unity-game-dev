@@ -1,6 +1,6 @@
 # Opus Jewel
 ## Game Development
 
-### Duarte Juan Ignacio
-### Alejandro Perez
+### Duarte Juan Ignacio - Programación
+### Alejandro Perez - Arte Pixelart
 ### Valentin Bochatai
