@@ -6,7 +6,8 @@ public class salaManager : MonoBehaviour
 {
     public int contadorBichos = 0;
     public bool enemigoMuerto = false;
-    private bool ganaste = false;
+    public bool ganaste = false;
+    public bool terminada = false;
     
     public List<objetoManager> objetosConProbabilidades;
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class salaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (contadorBichos == 0 && enemigoMuerto == true && ganaste == false)
+        if (contadorBichos == 0 && enemigoMuerto == true && ganaste == false && terminada == false)
         {
             Debug.Log("ganaste");
             terminarSala();

@@ -10,11 +10,16 @@ public class personaje : MonoBehaviour
     private Rigidbody2D rb;
     private Transform Posicion; 
     [Header("Movimiento")]
-    [SerializeField] private float velocidadMovimiento = 1f;
+    private float velocidadMovimientoInicial=5f;
+    public float velocidadMovimiento = 1f;
     [Header("Disparo")]
-    [SerializeField] private float velocidadDisparo=1f;
-    [SerializeField] private float proximoDisparo=1f,velocidadBala=1f;
-    [SerializeField] private float rangoDisparo = 5f;
+    public float velocidadDisparo=1f;
+    [SerializeField] private float proximoDisparo=1f;
+    public float velocidadBala=1f;
+    private float rangoDisparoInicial=5f;
+    public float rangoDisparo = 1f;
+    private float tamañoInicialProyectil=0.445f;
+    public float tamañoProyectil = 1f;
     private float distanciaRecorrida = 0f; //Distancia recorrida de la bala
     private Vector2 posicionInicialBala;
     
@@ -32,6 +37,7 @@ public class personaje : MonoBehaviour
      public Transform PuntoDisparoAbajoDerecha;
      private Transform PuntoDisparo;
      private Vector2 direccionDisparo;
+     
     
     [Header("Invulnerabilidad")]
     [SerializeField] private float tiempoInvulnerable = 2f;
@@ -43,19 +49,28 @@ public class personaje : MonoBehaviour
     private int vidasActuales;
     public TMP_Text textoVidas;
 
+    [Header("Tamaño")]
+    private float tamañoInicialJugador=1f;
+    public float tamañoJugador;
+
     //REFERENCIAS
     private GameObject escudo; // Referencia al objeto del escudo
     public GameObject escudoObject;
     private Escudo escudoScript; // Referencia al script del escudo
 
     //Limites de pared
-    private float limiteAbajo=-4.490f;
-    private float limiteArriba=4.490f;
-    //8.485
-    private float limiteIzquierdo=-8.685f;
-    private float limiteDerecho=8.685f;
+    // public bool limitar=false;
+    // private float limiteAbajo=-4.490f;
+    // private float limiteArriba=4.490f;
+    // //8.485
+    // private float limiteIzquierdo=-8.685f;
+    // private float limiteDerecho=8.685f;
 
     private bool estaMoviendo = false;
+    private bool bloquearArriba = false;
+    private bool bloquearAbajo = false;
+    private bool bloquearDerecha = false;
+    private bool bloquearIzquierda = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +80,7 @@ public class personaje : MonoBehaviour
         textoVidas.text = vidasActuales.ToString();
         PuntoDisparo = PuntoDisparoArriba;
         rb = GetComponent<Rigidbody2D>();
+        
 
         //ESCUDO
         escudoScript = escudoObject.GetComponent<Escudo>();
@@ -74,24 +90,27 @@ public class personaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        rb.transform.localScale = Vector3.one * (tamañoInicialJugador * tamañoJugador);
         // INICIO MOVIMIENTO JUGADOR
         float horizontalInput = Input.GetAxis("Horizontal") ;
         float verticalInput = Input.GetAxis("Vertical");
 
         //BLOQUEO DE MOVIMIENTOS
-        // Si el jugador está en una posición límite en el eje X, bloquear el movimiento horizontal
-        if ((horizontalInput < 0 && transform.position.x <= limiteIzquierdo) || (horizontalInput > 0 && transform.position.x >= limiteDerecho))
-        {
-        horizontalInput = 0;
+        
+        if(bloquearIzquierda && horizontalInput < 0){
+            horizontalInput=0;
         }
-        // Si el jugador está en una posición límite en el eje Y, bloquear el movimiento vertical
-        if ((verticalInput < 0 && transform.position.y <= limiteAbajo) || (verticalInput > 0 && transform.position.y >= limiteArriba))
-        {
-        verticalInput = 0;
+        if(bloquearDerecha && horizontalInput > 0){
+            horizontalInput=0;
+        }
+        if(bloquearArriba && verticalInput > 0){
+            verticalInput=0;
+        }
+        if(bloquearAbajo && verticalInput < 0){
+            verticalInput=0;
         }
 
-        Vector2 movement = new Vector2(horizontalInput, verticalInput) * velocidadMovimiento * Time.deltaTime;
+        Vector2 movement = new Vector2(horizontalInput, verticalInput) * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
         transform.Translate(movement);
         // FIN MOVIMIENTO JUGADOR
         // DISPARO
@@ -125,6 +144,45 @@ public class personaje : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("ParedIzquierda"))
+            {
+                bloquearIzquierda = true;
+            }
+            else if (collision.gameObject.CompareTag("ParedDerecha"))
+            {
+                bloquearDerecha = true;
+            }
+            else if (collision.gameObject.CompareTag("ParedArriba"))
+            {
+                bloquearArriba = true;
+            }
+            else if (collision.gameObject.CompareTag("ParedAbajo"))
+            {
+                bloquearAbajo = true;
+            }
+        }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ParedIzquierda"))
+            {
+                bloquearIzquierda = false;
+            }
+            else if (collision.gameObject.CompareTag("ParedDerecha"))
+            {
+                bloquearDerecha = false;
+            }
+            else if (collision.gameObject.CompareTag("ParedArriba"))
+            {
+                bloquearArriba = false;
+            }
+            else if (collision.gameObject.CompareTag("ParedAbajo"))
+            {
+                bloquearAbajo = false;
+            }
     }
 
     private void ActivarEscudo()
@@ -186,7 +244,7 @@ public class personaje : MonoBehaviour
         int roundedAngle = Mathf.RoundToInt(angle / 45f) * 45;
         float roundedAngleRad = roundedAngle * Mathf.Deg2Rad;
         direccionDisparo = new Vector2(Mathf.Cos(roundedAngleRad), Mathf.Sin(roundedAngleRad));
-
+        
         // Selecionar el punto de disparo correspondiente a la dirección redondeada
         if (direccionDisparo == Vector2.up)
         {
@@ -227,6 +285,9 @@ public class personaje : MonoBehaviour
         // Crear la bala en la posición del punto de disparo
         bala = Instantiate(Bala, PuntoDisparo.position, Quaternion.identity);
 
+        // Obtener el tamaño del proyectil
+        bala.transform.localScale = Vector3.one * (tamañoInicialProyectil * tamañoProyectil);
+
         // Obtener el componente Rigidbody2D de la bala
         Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
 
@@ -247,7 +308,7 @@ public class personaje : MonoBehaviour
         while (rbBala != null)
         {
         distanciaRecorrida = (posicionInicialBala - (Vector2)rbBala.transform.position).magnitude;
-        if (distanciaRecorrida > rangoDisparo)
+        if (distanciaRecorrida > (rangoDisparoInicial * rangoDisparo) )
         {
             Destroy(rbBala.gameObject);
         }

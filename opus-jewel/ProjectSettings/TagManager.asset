@@ -11,6 +11,14 @@ TagManager:
   - Proyectil
   - ProyectilEnemigo
   - Escudo
+  - Objetos
+  - Puertas
+  - ParedHorizontal
+  - ParedVertical
+  - ParedIzquierda
+  - ParedDerecha
+  - ParedArriba
+  - ParedAbajo
   layers:
   - Default
   - TransparentFX
@@ -23,9 +31,9 @@ TagManager:
   - Jugador
   - Escudo
   - Proyectil
-  - 
-  - 
-  - 
+  - Objetos
+  - Puertas
+  - Pared
   - 
   - 
   - 

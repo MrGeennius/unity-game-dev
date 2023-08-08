@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Escudo : MonoBehaviour
 {
     public Transform jugador;
+    private Rigidbody2D rb;
     public float fuerzaEmpujar = 10f;
     public float duracionActiva = 2f;
     private float duracionActivaI = 0f;
@@ -14,9 +15,12 @@ public class Escudo : MonoBehaviour
     private int primerEscudo = 0; // booleano
     public int cantidadBloqueos = 3; 
     private int bloqueosRestantes; //Contador
+    private float tamañoEscudoInicial=1.8f;
+    public float tamañoEscudo =1f;
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         duracionActivaI=duracionActiva;
         DesactivarEscudo(); // Desactivar el escudo original al inicio
         bloqueosRestantes = cantidadBloqueos;
@@ -37,7 +41,7 @@ public class Escudo : MonoBehaviour
         {
             Debug.Log("Se recuperó un bloqueo. Bloqueos restantes: " + bloqueosRestantes);
         }
-        
+        rb.transform.localScale = Vector3.one * (tamañoEscudoInicial * tamañoEscudo);
     }
 
     public void ActivarEscudo()
@@ -49,6 +53,7 @@ public class Escudo : MonoBehaviour
             bloqueosRestantes = cantidadBloqueos;
             // Crear una nueva instancia del escudo
             gameObject.SetActive(true); // Activar el objeto del escudo actual
+            
             transform.position = jugador.position; // Establecer la posición del escudo igual a la del jugador
             // Actualizar el tiempo de inicio del enfriamiento
             tiempoInicioEnfriamiento = Time.time;

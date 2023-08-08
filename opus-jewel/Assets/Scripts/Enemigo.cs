@@ -5,8 +5,8 @@ public class Enemigo : MonoBehaviour
 
     [Header("Estadisticas")]
     [SerializeField] private float velocidadMovimiento = 1f;
-    [SerializeField] private int vidasMaximas = 3;
-    private int vidasActuales;
+    [SerializeField] private float vidasMaximas = 3f;
+    private float vidasActuales;
     private Rigidbody2D rb;
     private personaje jugador;
 
@@ -55,15 +55,16 @@ public class Enemigo : MonoBehaviour
         return x >= limiteIzquierdo && x <= limiteDerecho && y >= limiteAbajo && y <= limiteArriba;
     }
 
-    public void RecibirGolpe()
+    public void RecibirGolpe(float daño)
     {
-        vidasActuales--;
+        vidasActuales -= daño;
 
         if (vidasActuales <= 0)
         {
             DestruirEnemigo();
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Jugador") && jugador.esInvulnerable==false)
