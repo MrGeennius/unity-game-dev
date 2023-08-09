@@ -9,9 +9,12 @@ public class Puertas : MonoBehaviour
     public Transform puntoTeletransporte;
     public Transform cameraTarget;
     private float cameraMoveSpeed = 120f;
+    public string salaActual;
+    public string salaDestino;
     void Start()
     {
         salaManager = SalaManagerReference; // Inicializa la referencia al script salaManager
+        salaManager.salaActual = salaActual;
     }
 
 
@@ -26,17 +29,22 @@ public class Puertas : MonoBehaviour
     {
         if (collision.CompareTag("Jugador"))
         {
-            if (salaManager != null && salaManager.ganaste && PuertasManager.puedeTeletransportar) // Verificar si el nivel ha sido vencido
+            Debug.Log("Colisión detectada");
+            Debug.Log("SalaManager bool sala derrotada: "+ salaManager.SalaFueDerrotada(salaActual) );
+            Debug.Log(salaManager.salaActual);
+            if (salaManager != null && salaManager.ganaste && PuertasManager.puedeTeletransportar && salaManager.SalaFueDerrotada(salaActual)) // Verificar si el nivel ha sido vencido
             {
+                
                 // Teletransportar al jugador a la puerta de destino
                 PuertasManager.puedeTeletransportar = false;
                 collision.transform.position = puntoTeletransporte.transform.position;
-                salaManager.terminada = true;
+                // salaManager.terminada = true;
                 if (cameraTarget != null)
                 {
                     StartCoroutine(MoveCameraSmoothly(cameraTarget.position));
                 }
                 StartCoroutine(HabilitarTeletransporte());
+                // salaManager.CambiarSalaActual(salaDestino);
             }
         }
     }

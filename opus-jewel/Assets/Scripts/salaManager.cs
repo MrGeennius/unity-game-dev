@@ -8,23 +8,30 @@ public class salaManager : MonoBehaviour
     public bool enemigoMuerto = false;
     public bool ganaste = false;
     public bool terminada = false;
-    
+    private Dictionary<string, bool> salasDerrotadas = new Dictionary<string, bool>();
     public List<objetoManager> objetosConProbabilidades;
+    private Puertas puertas;
+    public string salaActual;
     // Start is called before the first frame update
     void Start()
     {
-        // Obtener una referencia al objeto con el script salaManager
-        
+        puertas = FindObjectOfType<Puertas>();
     }
+        
 
     // Update is called once per frame
     void Update()
     {
-        if (contadorBichos == 0 && enemigoMuerto == true && ganaste == false && terminada == false)
+        if (contadorBichos == 0 && enemigoMuerto == true && ganaste == false)
         {
             Debug.Log("ganaste");
             terminarSala();
             ganaste=true;
+            MarcarSalaComoDerrotada(salaActual);
+        }
+        if (!salasDerrotadas.ContainsKey(salaActual))
+        {
+            salasDerrotadas.Add(salaActual, false);
         }
     }
     public void terminarSala()
@@ -46,5 +53,28 @@ public class salaManager : MonoBehaviour
         // Si el objeto no fue seleccionado, restar su probabilidad al número aleatorio y seguir buscando
         randomValue -= objetoProbabilidad.probabilidad;
         }
+    }
+    // Método para marcar una sala como derrotada
+
+
+    public void MarcarSalaComoDerrotada(string salaActual)
+    {
+        if (salasDerrotadas.ContainsKey(salaActual))
+        {
+            salasDerrotadas[salaActual] = true;
+        }
+    }
+
+    public bool SalaFueDerrotada(string salaActual)
+    {
+        if (salasDerrotadas.ContainsKey(salaActual))
+        {
+            return salasDerrotadas[salaActual];
+        }
+        return false;
+    }
+    public void CambiarSalaActual(string salaDestino)
+    {
+        salaActual=salaDestino;
     }
 }
