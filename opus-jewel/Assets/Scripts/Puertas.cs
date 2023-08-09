@@ -11,16 +11,25 @@ public class Puertas : MonoBehaviour
     private float cameraMoveSpeed = 120f;
     public string salaActual;
     public string salaDestino;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private bool cambiarColor =true;
     void Start()
     {
         salaManager = SalaManagerReference; // Inicializa la referencia al script salaManager
         salaManager.salaActual = salaActual;
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
     void Update()
     {
-
+        if(salaManager.SalaFueDerrotada(salaActual) && cambiarColor==true)
+        {
+            spriteRenderer.color = Color.green;
+            cambiarColor = false;
+        }
     }
     
     // public Puertas puertaDestino; // Referencia a la puerta de destino
