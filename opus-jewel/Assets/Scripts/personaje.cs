@@ -111,7 +111,8 @@ public class personaje : MonoBehaviour
             verticalInput=0;
         }
 
-        Vector2 movement = new Vector2(horizontalInput, verticalInput) * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
+        Vector2 inputDirection = new Vector2(horizontalInput, verticalInput).normalized; // Normalizar el vector de entrada
+        Vector2 movement = inputDirection * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
         transform.Translate(movement);
         // FIN MOVIMIENTO JUGADOR
         // DISPARO

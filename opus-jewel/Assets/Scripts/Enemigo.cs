@@ -4,7 +4,6 @@ public class Enemigo : MonoBehaviour
 {
 
     [Header("Estadisticas")]
-    [SerializeField] private float velocidadMovimiento = 1f;
     [SerializeField] private float vidasMaximas = 3f;
     private float vidasActuales;
     private Rigidbody2D rb;
@@ -12,15 +11,7 @@ public class Enemigo : MonoBehaviour
 
     [Header("Velocidad Golpes")]
     [SerializeField] private float fuerzaRetroceso = 5f;
-
-
-    //Limites
-    private float limiteAbajo=-4.6f;
-    private float limiteArriba=4.6f;
-    private float limiteIzquierdo=-8.8f;
-    private float limiteDerecho=8.8f;
-
-    private bool isOnMap = true;
+    
     private salaManager manager;
 
     void Start()
@@ -32,27 +23,13 @@ public class Enemigo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Actualizar la variable isOnMap según la posición inicial del enemigo
-        if (gameObject.CompareTag("Enemigo"))
-        {
-            isOnMap = CheckIfOnMap();
-        }
+
     }
     
     void Update()
     {
         // Mover al enemigo hacia el jugador
-        if (jugador != null && isOnMap==true)
-        {
-            Vector2 direccion = jugador.transform.position - transform.position;
-            direccion.Normalize();
-            transform.Translate(direccion * velocidadMovimiento * Time.deltaTime);
-        }
-    }
-    private bool CheckIfOnMap()
-    {
-        float x = transform.position.x;
-        float y = transform.position.y;
-        return x >= limiteIzquierdo && x <= limiteDerecho && y >= limiteAbajo && y <= limiteArriba;
+
     }
 
     public void RecibirGolpe(float daño)
