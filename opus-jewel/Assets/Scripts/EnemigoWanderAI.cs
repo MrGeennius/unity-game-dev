@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class EnemigoWanderAI : MonoBehaviour
 {
-    [SerializeField] private float velocidadMovimiento;
-    [SerializeField] private float distanciaMinima;
-    private int numeroAleatorio;
+
     private SpriteRenderer spriteRenderer;
 
-    private float limiteAbajo=-4.6f;
-    private float limiteArriba=4.6f;
-    private float limiteIzquierdo=-8.8f;
-    private float limiteDerecho=8.8f;
+    // private float limiteAbajo=-4.6f;
+    // private float limiteArriba=4.6f;
+    // private float limiteIzquierdo=-8.8f;
+    // private float limiteDerecho=8.8f;
     private EnemigoCiego enemigociego;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        enemigociego = GetComponent<EnemigoCiego>();
     }
 
     // Update is called once per frame

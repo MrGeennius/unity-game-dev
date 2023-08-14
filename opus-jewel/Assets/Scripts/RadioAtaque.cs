@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//ESTE SCRIPT DEBE MANEJAR EL RADIO DE ATAQUE DEL ENEMIGO CIEGO
+
 public class RadioAtaque : MonoBehaviour
 {
     private EnemigoCiego enemigo;
@@ -9,7 +11,7 @@ public class RadioAtaque : MonoBehaviour
     private Transform enemigoTransform; // Transform del enemigo
     void Start ()
     {
-        checkpoints = GetComponentInParent<EnemigoIAcheckpoints>();
+        //checkpoints = GetComponentInParent<EnemigoIAcheckpoints>();
         enemigo = GetComponentInParent<EnemigoCiego>();
         enemigoTransform = enemigo.transform;
     }
@@ -22,18 +24,12 @@ public class RadioAtaque : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Jugador"))
+        if (collision.CompareTag("Jugador") && !enemigo.atacando)
         {
-            enemigo = GetComponentInParent<EnemigoCiego>();
-            StartCoroutine(ActivarAtaqueDespuesDeEspera());
+            StartCoroutine(enemigo.ActivarAtaqueDespuesDeEspera());
+            enemigo.sr.color = Color.red;
+            enemigo.atacando = true;
         }
     }
-    private IEnumerator ActivarAtaqueDespuesDeEspera()
-    {
-        yield return new WaitForSeconds(3f); // Espera 3 segundos
-        Vector2 direccion = (enemigo.jugadorTransform.position - enemigo.transform.position).normalized;
-        enemigo.ActivarAtaque(direccion);
-        enemigo.atacando = true;
-        checkpoints.alcanzoPunto = true;
-    }
+    
 }
