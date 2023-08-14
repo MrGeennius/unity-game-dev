@@ -647,7 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyNormalPrefab: {fileID: 1584682010}
   enemyLargePrefab: {fileID: 751179100}
-  enemyCiegoPrefab: {fileID: 751179100}
+  enemyCiegoPrefab: {fileID: 625504156}
 --- !u!4 &145509488
 Transform:
   m_ObjectHideFlags: 0
@@ -841,15 +841,15 @@ MonoBehaviour:
   terminada: 0
   objetosConProbabilidades:
   - objeto: {fileID: 1753173563}
-    probabilidad: 0
+    probabilidad: 0.2
   - objeto: {fileID: 290925945}
-    probabilidad: 0
+    probabilidad: 0.2
   - objeto: {fileID: 143843662}
-    probabilidad: 1
+    probabilidad: 0.2
   - objeto: {fileID: 1211548116}
-    probabilidad: 0
+    probabilidad: 0.2
   - objeto: {fileID: 1603567192}
-    probabilidad: 0
+    probabilidad: 0.2
   salaActual: 
 --- !u!4 &197238861
 Transform:
@@ -1231,7 +1231,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3647059}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerzaRetroceso: 1
-  "da\xF1oProyectil": 10
+  "da\xF1oProyectil": 1
 --- !u!1 &270947261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,7 +2767,6 @@ GameObject:
   - component: {fileID: 625504158}
   - component: {fileID: 625504163}
   - component: {fileID: 625504165}
-  - component: {fileID: 625504166}
   m_Layer: 7
   m_Name: Enemigo_ciego
   m_TagString: Untagged
@@ -2802,8 +2801,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2927,35 +2926,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c574fc558439a344aef1fde461f0c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulso: 0.035
+  velocidadMovimiento: 2
+  distanciaMinima: 0
+  posicionMinimaX: -2
+  posicionMaximaX: 2
+  posicionMinimaY: -2
+  posicionMaximaY: 2
+  impulso: 0.3
   duracionImpulso: 1.5
-  atacando: 0
-  jugadorTransform: {fileID: 0}
   frenado: 369
---- !u!114 &625504166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625504156}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 603f6ff3afbc97e45a2ead55491f11a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadMovimiento: 5
-  puntosMovimiento:
-  - {fileID: 270947262}
-  - {fileID: 1202180009}
-  - {fileID: 1127909699}
-  - {fileID: 742808990}
-  - {fileID: 1835667216}
-  - {fileID: 1222213543}
-  - {fileID: 1961841456}
-  - {fileID: 764171498}
-  distanciaMinima: 1.5
-  alcanzoPunto: 0
+  sr: {fileID: 0}
+  atacando: 0
+  jugadorTransform: {fileID: 405527330}
 --- !u!1 &649502330
 GameObject:
   m_ObjectHideFlags: 0
