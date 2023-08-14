@@ -30,8 +30,9 @@ public class enemySpawner : MonoBehaviour
             Vector2 posicion = new Vector2(Random.Range(-8f, 3.5f), 4f);
                 Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
                 manager.contadorBichos++;
-                Instantiate(enemyCiegoPrefab, posicion, Quaternion.identity);
+                Instantiate(enemyLargePrefab, posicion, Quaternion.identity);
                 manager.contadorBichos++;
+
             yield return new WaitForSecondsRealtime(1);
         }
     }
