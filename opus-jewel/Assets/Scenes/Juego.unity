@@ -484,7 +484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143843662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.96, y: -1.0799999, z: -0.2341706}
+  m_LocalPosition: {x: 21.39, y: 0.8499999, z: -0.2341706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -743,7 +743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176252582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.49, y: -0.44, z: 0}
+  m_LocalPosition: {x: 18.919998, y: 1.4899998, z: 0}
   m_LocalScale: {x: 1.8000002, y: 1.8000002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1380,7 +1380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242670010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.26, y: -0.49, z: 0}
+  m_LocalPosition: {x: 16.690002, y: 1.4399998, z: 0}
   m_LocalScale: {x: 0.445, y: 0.445, z: 0.445}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1722,7 +1722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290925945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.96, y: 0.31000018, z: -0.2341706}
+  m_LocalPosition: {x: 21.39, y: 2.24, z: -0.2341706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1972,7 +1972,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &405527329
 SpriteRenderer:
@@ -2769,7 +2769,7 @@ GameObject:
   - component: {fileID: 625504165}
   m_Layer: 7
   m_Name: Enemigo_ciego
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2801,7 +2801,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 10
   m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -2885,7 +2885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625504156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.192546, y: -3.2944028, z: -8.981317}
+  m_LocalPosition: {x: 14.622545, y: -1.364403, z: -8.981317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2926,18 +2926,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c574fc558439a344aef1fde461f0c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: 2
-  distanciaMinima: 0
+  velocidadMovimiento: 0.15
+  distanciaMinima: 0.1
+  distanciaMinimaRecorrido: 1
   posicionMinimaX: -2
   posicionMaximaX: 2
   posicionMinimaY: -2
   posicionMaximaY: 2
-  impulso: 0.3
-  duracionImpulso: 1.5
+  impulso: 1
+  duracionImpulso: 1
   frenado: 369
   sr: {fileID: 0}
   atacando: 0
   jugadorTransform: {fileID: 405527330}
+  tiempoEspera: 1
 --- !u!1 &649502330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,7 +3296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751179100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.86, y: 1.79, z: -8.481317}
+  m_LocalPosition: {x: 13.29, y: 3.72, z: -8.481317}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4444,7 +4446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211548116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.96, y: -2.42, z: -0.2341706}
+  m_LocalPosition: {x: 21.39, y: -0.49000025, z: -0.2341706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4465,17 +4467,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escudoObject: {fileID: 176252582}
   proyectilObject: {fileID: 242670010}
-  "tama\xF1oJugador": 1
-  velocidadMovimiento: 1
-  "da\xF1oProyectil": 1
-  "tama\xF1oProyectil": 1
-  velocidadProyectil: 1
-  cadenciaDisparo: 1
-  rangoDisparo: 1.2
-  retrocesoProyectil: 1
-  "tama\xF1oEscudo": 1
-  cantidadBloqueosEscudo: 1
-  duracionActivaEscudo: 1
+  "tama\xF1oJugador": 0
+  velocidadMovimiento: 0
+  "da\xF1oProyectil": 0
+  "tama\xF1oProyectil": 0
+  velocidadProyectil: 0
+  cadenciaDisparo: 0
+  rangoDisparo: 0.2
+  retrocesoProyectil: 0
+  "tama\xF1oEscudo": 0
+  cantidadBloqueosEscudo: 0
+  duracionActivaEscudo: 0
   "Mtama\xF1oJugador": 1
   MvelocidadMovimiento: 1
   "Mda\xF1oProyectil": 1
@@ -5440,7 +5442,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584682010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.02, y: 1.89, z: -8.481317}
+  m_LocalPosition: {x: 15.450001, y: 3.8199997, z: -8.481317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5572,7 +5574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603567192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.96, y: -3.71, z: -0.2341706}
+  m_LocalPosition: {x: 21.39, y: -1.7800002, z: -0.2341706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6423,7 +6425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753173563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.99, y: 1.69, z: -0.2341706}
+  m_LocalPosition: {x: 21.419998, y: 3.62, z: -0.2341706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
