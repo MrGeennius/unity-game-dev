@@ -43,9 +43,10 @@ public class EnemigoCiego : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         isOnMap=CheckIfOnMap();
-        ElegirNuevoObjetivo();
+        
         posicionXEnemigo = transform.position.x;
         posicionYEnemigo = transform.position.y;
+        ElegirNuevoObjetivo();
         
     }
     private void Update()
