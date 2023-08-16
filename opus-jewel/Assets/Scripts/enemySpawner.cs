@@ -28,9 +28,9 @@ public class enemySpawner : MonoBehaviour
         for (int i = 0; i < cantidadMaximaSpawn; i++)
         {
             Vector2 posicion = new Vector2(Random.Range(-8f, 3.5f), 4f);
-                Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
-                manager.contadorBichos++;
-                Instantiate(enemyLargePrefab, posicion, Quaternion.identity);
+                // Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+                // manager.contadorBichos++;
+                Instantiate(enemyCiegoPrefab, posicion, Quaternion.identity);
                 manager.contadorBichos++;
 
             yield return new WaitForSecondsRealtime(1);
