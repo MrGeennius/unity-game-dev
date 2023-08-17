@@ -14,8 +14,10 @@ public class Puertas : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private bool cambiarColor =true;
+    private enemySpawner enemySpawner;
     void Start()
     {
+        enemySpawner = GameObject.FindObjectOfType<enemySpawner>();
         salaManager = SalaManagerReference; // Inicializa la referencia al script salaManager
         salaManager.salaActual = salaActual;
         rb = GetComponent<Rigidbody2D>();
@@ -39,12 +41,15 @@ public class Puertas : MonoBehaviour
         if (collision.CompareTag("Jugador"))
         {
             Debug.Log("Colisión detectada");
+            
             Debug.Log("SalaManager bool sala derrotada: "+ salaManager.SalaFueDerrotada(salaActual) );
             Debug.Log(salaManager.salaActual);
             if (salaManager != null && salaManager.ganaste && PuertasManager.puedeTeletransportar && salaManager.SalaFueDerrotada(salaActual)) // Verificar si el nivel ha sido vencido
             {
                 
                 // Teletransportar al jugador a la puerta de destino
+                EnemigoMovActivoManager.puedeMoverse = false;
+                enemySpawner.sala2();
                 PuertasManager.puedeTeletransportar = false;
                 collision.transform.position = puntoTeletransporte.transform.position;
                 // salaManager.terminada = true;
@@ -52,6 +57,7 @@ public class Puertas : MonoBehaviour
                 {
                     StartCoroutine(MoveCameraSmoothly(cameraTarget.position));
                 }
+                
                 StartCoroutine(HabilitarTeletransporte());
                 // salaManager.CambiarSalaActual(salaDestino);
             }

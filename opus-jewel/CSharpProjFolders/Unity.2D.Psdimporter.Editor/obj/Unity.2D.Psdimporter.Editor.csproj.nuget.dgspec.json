@@ -1,0 +1,1044 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Psdimporter.Editor\\Unity.2D.Psdimporter.Editor.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\PsdPlugin\\PsdPlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\PsdPlugin\\PsdPlugin.csproj",
+        "projectName": "PsdPlugin",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\PsdPlugin\\PsdPlugin.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\PsdPlugin\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Editor\\Unity.2D.Animation.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Editor\\Unity.2D.Animation.Editor.csproj",
+        "projectName": "Unity.2D.Animation.Editor",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Editor\\Unity.2D.Animation.Editor.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
+              },
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj",
+        "projectName": "Unity.2D.Animation.Runtime",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj",
+        "projectName": "Unity.2D.Common.Editor",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
+              },
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj",
+        "projectName": "Unity.2D.Common.Runtime",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\Unity.2D.Common.Runtime.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Runtime\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Psdimporter.Editor\\Unity.2D.Psdimporter.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Psdimporter.Editor\\Unity.2D.Psdimporter.Editor.csproj",
+        "projectName": "Unity.2D.Psdimporter.Editor",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Psdimporter.Editor\\Unity.2D.Psdimporter.Editor.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Psdimporter.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\PsdPlugin\\PsdPlugin.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\PsdPlugin\\PsdPlugin.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Editor\\Unity.2D.Animation.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Editor\\Unity.2D.Animation.Editor.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Animation.Runtime\\Unity.2D.Animation.Runtime.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Common.Editor\\Unity.2D.Common.Editor.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
+              },
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj",
+        "projectName": "Unity.2D.Sprite.Editor",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj",
+        "projectName": "Unity.Burst",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Burst\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj",
+        "projectName": "Unity.InternalAPIEditorBridge.001",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\Unity.InternalAPIEditorBridge.001.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.001\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.2D.Sprite.Editor\\Unity.2D.Sprite.Editor.csproj"
+              },
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj",
+        "projectName": "Unity.InternalAPIEngineBridge.001",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\Unity.InternalAPIEngineBridge.001.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.InternalAPIEngineBridge.001\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
+        "projectName": "Unity.Mathematics",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj",
+        "projectName": "UnityEditor.TestRunner",
+        "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj",
+        "projectName": "UnityEditor.UI",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\UnityEditor.UI.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEditor.TestRunner\\UnityEditor.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj"
+              },
+              "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+                "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj",
+        "projectName": "UnityEngine.TestRunner",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\UnityEngine.TestRunner.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.TestRunner\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj",
+        "projectName": "UnityEngine.UI",
+        "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\UnityEngine.UI.csproj",
+        "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\UnityEngine.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

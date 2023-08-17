@@ -37,16 +37,21 @@ public class EnemigoCiego : MonoBehaviour
     private bool grande = false;
     public Transform jugadorTransform;
     public float tiempoEspera;
-
+    public bool activado = true;
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-        isOnMap=CheckIfOnMap();
-        
-        posicionXEnemigo = transform.position.x;
-        posicionYEnemigo = transform.position.y;
-        ElegirNuevoObjetivo();
+        gameObject.SetActive(activado);
+        if(activado)
+        {
+            rb = GetComponent<Rigidbody2D>();
+            sr = GetComponent<SpriteRenderer>();
+            isOnMap=CheckIfOnMap();
+            
+            posicionXEnemigo = transform.position.x;
+            posicionYEnemigo = transform.position.y;
+            ElegirNuevoObjetivo();
+        }
+            
         
     }
     private void Update()
@@ -76,7 +81,7 @@ public class EnemigoCiego : MonoBehaviour
         float x = posicionXEnemigo;
         float y = posicionYEnemigo;
         int i = 0;
-        while (!objetivoValido && i < 10 && isOnMap)
+        while (!objetivoValido && i < 100 && isOnMap)
         {
             x = posicionXEnemigo + Random.Range(posicionMinimaX, posicionMaximaX);
             y = posicionYEnemigo + Random.Range(posicionMinimaY, posicionMaximaY);
@@ -136,14 +141,14 @@ public class EnemigoCiego : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                yield return new WaitForSeconds(1f); // Espera 1 segundo
+                yield return new WaitForSeconds(1f); 
                 // Escalar el tamaño del enemigo
                 transform.localScale *= 1.2f; // Aumenta el tamaño en un 20%
             }
             grande=true;
         }
         
-        yield return new WaitForSeconds(3f); // Espera 3 segundos
+        yield return new WaitForSeconds(1f);
         Vector2 direccion = (jugadorTransform.position - transform.position).normalized;
         ActivarAtaque(direccion);
         //checkpoints.alcanzoPunto = true;
@@ -168,7 +173,7 @@ public class EnemigoCiego : MonoBehaviour
         float fuerzaFrenado = Mathf.Clamp(frenado * velocidadMagnitud, 0f, rb.mass * frenado);
         rb.AddForce(direccionFrenado * fuerzaFrenado, ForceMode2D.Force);
         Debug.Log("Eligiendo nuevo objetivo");
-        atacando=false;
+        
         sr.color = Color.white;
         if(grande)
         {
@@ -180,6 +185,7 @@ public class EnemigoCiego : MonoBehaviour
             }
             grande=false;
         }
+        atacando=false;
         ElegirNuevoObjetivo();
     }
 }

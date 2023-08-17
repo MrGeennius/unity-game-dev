@@ -12,6 +12,7 @@ public class salaManager : MonoBehaviour
     public List<objetoManager> objetosConProbabilidades;
     private Puertas puertas;
     public string salaActual;
+    public bool wavesCompletadas = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +23,17 @@ public class salaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (contadorBichos == 0 && enemigoMuerto == true && ganaste == false)
+        if (!salasDerrotadas.ContainsKey(salaActual))
+        {
+            salasDerrotadas.Add(salaActual, false);
+        }
+        if (wavesCompletadas && !salasDerrotadas[salaActual])
         {
             Debug.Log("ganaste");
             terminarSala();
             ganaste=true;
             MarcarSalaComoDerrotada(salaActual);
-        }
-        if (!salasDerrotadas.ContainsKey(salaActual))
-        {
-            salasDerrotadas.Add(salaActual, false);
+            wavesCompletadas = false;
         }
     }
     public void terminarSala()

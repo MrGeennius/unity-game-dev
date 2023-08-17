@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PC3BUUugyLV1uTOIYF9+9tk2M7GakUDC+e4lARWGZPKASNIkPSqtFdGjHvj0wzzK0cAS1UXaL/zgK16me51TWQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Assembly-CSharp\\Assembly-CSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mrgee\\.nuget\\packages\\microsoft.unity.analyzers\\1.17.0\\microsoft.unity.analyzers.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

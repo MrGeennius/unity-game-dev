@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class personaje : MonoBehaviour
+public class Jugador : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
@@ -91,6 +91,23 @@ public class personaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         // DISPARO
+        if (Input.GetMouseButtonDown(0) && Time.time>proximoDisparo){
+            Disparo();
+            proximoDisparo=Time.time+velocidadDisparo;
+        }
+        //FIN DISPARO
+
+        //ESCUDO
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+            ActivarEscudo();
+        }
+        //FIN ESCUDO
+    }
+    void FixedUpdate()
+    {
         rb.transform.localScale = Vector3.one * (tamañoInicialJugador * tamañoJugador);
         // INICIO MOVIMIENTO JUGADOR
         float horizontalInput = Input.GetAxis("Horizontal") ;
@@ -115,20 +132,7 @@ public class personaje : MonoBehaviour
         Vector2 movement = inputDirection * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
         transform.Translate(movement);
         // FIN MOVIMIENTO JUGADOR
-        // DISPARO
-        if (Input.GetMouseButtonDown(0) && Time.time>proximoDisparo){
-            Disparo();
-            proximoDisparo=Time.time+velocidadDisparo;
-        }
-        //FIN DISPARO
-
-        //ESCUDO
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            ActivarEscudo();
-        }
-        //FIN ESCUDO
+       
 
         // Verificar si el jugador se está moviendo
         if(estaMoviendo = movement.magnitude > 0f){

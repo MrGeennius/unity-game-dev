@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class EnemigoColisionAI : MonoBehaviour
 {
-    private personaje jugador;
+    
+    private Jugador jugador;
     private Rigidbody2D rb;
     [SerializeField] private float velocidadMovimiento = 1f;
     private float limiteAbajo=-4.6f;
     private float limiteArriba=4.6f;
-    private float limiteIzquierdo=-8.8f;
+    private float limiteIzquierdo=-31.8f;
     private float limiteDerecho=8.8f;
-
     private bool isOnMap = true;
 
 
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<personaje>();
+        jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<Jugador>();
         rb = GetComponent<Rigidbody2D>();
 
         if (gameObject.CompareTag("Enemigo"))
@@ -27,8 +27,8 @@ public class EnemigoColisionAI : MonoBehaviour
     }
 
     void Update()
-    {
-        if (jugador != null && isOnMap==true)
+    {   
+        if (jugador != null && isOnMap==true && EnemigoMovActivoManager.puedeMoverse)
         {
             Vector2 direccion = jugador.transform.position - transform.position;
             direccion.Normalize();

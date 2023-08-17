@@ -7,19 +7,20 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float vidasMaximas = 3f;
     private float vidasActuales;
     private Rigidbody2D rb;
-    private personaje jugador;
+    private Jugador jugador;
 
     [Header("Velocidad Golpes")]
     [SerializeField] private float fuerzaRetroceso = 5f;
     
     private salaManager manager;
+    private enemySpawner enemySpawner;
 
     void Start()
     {
         manager = GameObject.FindObjectOfType<salaManager>();
-
+        enemySpawner = GameObject.FindObjectOfType<enemySpawner>();
         vidasActuales = vidasMaximas;
-        jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<personaje>();
+        jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<Jugador>();
         rb = GetComponent<Rigidbody2D>();
 
         // Actualizar la variable isOnMap según la posición inicial del enemigo
@@ -48,7 +49,7 @@ public class Enemigo : MonoBehaviour
         {
             Debug.Log("Golpeado");
             // Obtener el script del jugador y restarle vidas
-            personaje jugador = collision.gameObject.GetComponent<personaje>();
+            Jugador jugador = collision.gameObject.GetComponent<Jugador>();
             if (jugador != null)
             {
                 jugador.RecibirGolpe();
@@ -69,7 +70,7 @@ public class Enemigo : MonoBehaviour
         {
             Debug.Log("Golpeado por Mantenerse en Contacto");
             // Obtener el script del jugador y restarle vidas
-            personaje jugador = collision.gameObject.GetComponent<personaje>();
+            Jugador jugador = collision.gameObject.GetComponent<Jugador>();
             if (jugador != null)
             {
                 jugador.RecibirGolpe();
@@ -87,7 +88,7 @@ public class Enemigo : MonoBehaviour
     private void DestruirEnemigo()
     {
         Destroy(gameObject);
-        manager.contadorBichos--;
-        manager.enemigoMuerto=true;
+        enemySpawner.ContadorBichos--;
+        enemySpawner.enemigoMuerto=true;
     }
 }

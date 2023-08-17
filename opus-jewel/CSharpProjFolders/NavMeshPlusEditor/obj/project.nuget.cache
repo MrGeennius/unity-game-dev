@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jXQJzZMwwhsHPEXMqGVsqZL1QU6b0UEnZizLBgX1fgXVKwBlvZ+AHGyor55eBOhxFmn5zxxehT32JXzSOMyT3A==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\NavMeshPlusEditor\\NavMeshPlusEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mrgee\\.nuget\\packages\\microsoft.unity.analyzers\\1.17.0\\microsoft.unity.analyzers.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class objetoEditor : MonoBehaviour
 {
-    private personaje jugador;
+    private Jugador jugador;
     private GameObject escudo; // Referencia al objeto del escudo
     public GameObject escudoObject;
     public GameObject proyectilObject;
@@ -57,7 +57,7 @@ public class objetoEditor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<personaje>();
+        jugador = GameObject.FindGameObjectWithTag("Jugador").GetComponent<Jugador>();
         escudoScript = escudoObject.GetComponent<Escudo>();
         ProyectilScript = proyectilObject.GetComponent<Proyectil>();
     }
