@@ -36,6 +36,8 @@ public class enemySpawner : MonoBehaviour
         if(enemigoMuerto && ContadorBichos == 0)
         {
             ContadorWaves--;
+            // Debug.Log("Wave Numero: "+ ContadorWaves);
+            // Debug.Log("Wave Completada: " + manager.wavesCompletadas);
             enemigoMuerto = false;
             StartCoroutine(waves());
         }
@@ -64,33 +66,65 @@ public class enemySpawner : MonoBehaviour
                 Vector2 posicion = new Vector2(Random.Range(-8f, 3.5f), 4f);
                 Instantiate(enemyCiegoPrefab, posicion, Quaternion.identity);
                 ContadorBichos++;
+
             }
             if(ContadorWaves == 0)
             {
+                Debug.Log(ContadorWaves);
                 manager.wavesCompletadas = true;
+            }
+            if(ContadorWaves == -1)
+            {
+                manager.wavesCompletadas = true;
+                manager.xObj = -22;
+            }
+            if(ContadorWaves == -2)
+            {
+                manager.wavesCompletadas = true;
+                manager.yObj = 14;
             }
             
     }
 
     public void sala2()
-    {
-        StartCoroutine(moverse());
-        Vector2 posicion = new Vector2(Random.Range(-26, -16), Random.Range(-4, 4) );
-        Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
-
-        ContadorBichos++;
-        posicion = new Vector2(Random.Range(-26, -16), Random.Range(-4, 4) );
-        Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
-
-        ContadorBichos++;
-        posicion = new Vector2(Random.Range(-26, -16), Random.Range(-4, 4) );
-        Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
-        ContadorBichos++;
+    {   StartCoroutine(moverse());
+        if (!manager.salasDerrotadas[manager.salaActual] && manager.salaActual == "Sala2")
+        {
+            
+            Vector2 posicion = new Vector2(Random.Range(-26, -18), Random.Range(-4, 4) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(-4, 4) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(-4, 4) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+            ContadorBichos++;
+        }
+        if (!manager.salasDerrotadas[manager.salaActual] && manager.salaActual == "Sala3")
+        {
+            
+            Vector2 posicion = new Vector2(Random.Range(-26, -18), Random.Range(13, 17) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(13, 17) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(13, 17) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+            ContadorBichos++;
+        }
     }
+    
+
     IEnumerator moverse()
     {
         EnemigoMovActivoManager.puedeMoverse = false;
-        yield return new WaitForSecondsRealtime(1.15f);
+        yield return new WaitForSecondsRealtime(1f);
         EnemigoMovActivoManager.puedeMoverse = true;
     }
 

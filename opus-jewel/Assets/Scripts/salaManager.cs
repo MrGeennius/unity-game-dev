@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class salaManager : MonoBehaviour
@@ -8,14 +10,18 @@ public class salaManager : MonoBehaviour
     public bool enemigoMuerto = false;
     public bool ganaste = false;
     public bool terminada = false;
-    private Dictionary<string, bool> salasDerrotadas = new Dictionary<string, bool>();
+    
+    public Dictionary<string, bool> salasDerrotadas = new Dictionary<string, bool>();
     public List<objetoManager> objetosConProbabilidades;
     private Puertas puertas;
     public string salaActual;
     public bool wavesCompletadas = false;
+    [HideInInspector] public float xObj = 0;
+    [HideInInspector] public float yObj = 0;
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Se empezo el script, sala actual : " + salaActual);
         puertas = FindObjectOfType<Puertas>();
     }
         
@@ -23,10 +29,19 @@ public class salaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!salasDerrotadas.ContainsKey(salaActual))
         {
             salasDerrotadas.Add(salaActual, false);
         }
+
+        if(wavesCompletadas)
+        {
+            Debug.Log("SalasDerrotadas: " + !salasDerrotadas[salaActual]);
+            Debug.Log(wavesCompletadas && !salasDerrotadas[salaActual]);
+            Debug.Log(salaActual);
+        }
+        
         if (wavesCompletadas && !salasDerrotadas[salaActual])
         {
             Debug.Log("ganaste");
@@ -39,6 +54,7 @@ public class salaManager : MonoBehaviour
     public void terminarSala()
     {
     // Generar un número aleatorio entre 0 y 1
+    Vector3 posicionDeseada = new Vector3(xObj, yObj, 0);
     float randomValue = Random.value;
 
     // Recorrer la lista de objetos con probabilidades
@@ -48,7 +64,7 @@ public class salaManager : MonoBehaviour
         if (randomValue <= objetoProbabilidad.probabilidad)
         {
             // Instanciar el objeto seleccionado
-            Instantiate(objetoProbabilidad.objeto, transform.position, Quaternion.identity);
+            Instantiate(objetoProbabilidad.objeto, posicionDeseada, Quaternion.identity);
             break; // Salir del bucle, ya que ya hemos seleccionado un objeto
         }
 
@@ -77,6 +93,8 @@ public class salaManager : MonoBehaviour
     }
     public void CambiarSalaActual(string salaDestino)
     {
+        Debug.Log("Cambiando Sala: " + salaActual);
         salaActual=salaDestino;
+        Debug.Log("Sala Cambiada: " + salaActual);
     }
 }

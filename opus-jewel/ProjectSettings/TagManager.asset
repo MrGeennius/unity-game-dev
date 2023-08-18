@@ -19,6 +19,7 @@ TagManager:
   - ParedDerecha
   - ParedArriba
   - ParedAbajo
+  - Fondo
   layers:
   - Default
   - TransparentFX

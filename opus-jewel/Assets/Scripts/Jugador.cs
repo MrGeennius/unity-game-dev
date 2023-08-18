@@ -114,17 +114,16 @@ public class Jugador : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         //BLOQUEO DE MOVIMIENTOS
-        
-        if(bloquearIzquierda && horizontalInput < 0){
+        if(bloquearIzquierda && horizontalInput < 0 || !EnemigoMovActivoManager.puedeMoverse){
             horizontalInput=0;
         }
-        if(bloquearDerecha && horizontalInput > 0){
+        if(bloquearDerecha && horizontalInput > 0 || !EnemigoMovActivoManager.puedeMoverse){
             horizontalInput=0;
         }
-        if(bloquearArriba && verticalInput > 0){
+        if(bloquearArriba && verticalInput > 0 || !EnemigoMovActivoManager.puedeMoverse){
             verticalInput=0;
         }
-        if(bloquearAbajo && verticalInput < 0){
+        if(bloquearAbajo && verticalInput < 0 || !EnemigoMovActivoManager.puedeMoverse){
             verticalInput=0;
         }
 

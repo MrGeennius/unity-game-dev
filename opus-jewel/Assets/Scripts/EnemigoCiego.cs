@@ -65,7 +65,6 @@ public class EnemigoCiego : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Escudo") )
         {
-            Debug.Log("Colision detectada");
             impulsando = false;
         }
     }
@@ -94,11 +93,10 @@ public class EnemigoCiego : MonoBehaviour
             float distancia = Vector2.Distance(new Vector2(x, y), new Vector2(posicionXEnemigo, posicionYEnemigo));
 
             objetivo = new Vector3(x, y, transform.position.z);
-            Debug.Log(x + " " + y + " " +  (x >= limiteIzquierdo && x <= limiteDerecho && y >= limiteAbajo && y <= limiteArriba && distancia >= distanciaMinimaRecorrido));
+            // Debug.Log(x + " " + y + " " +  (x >= limiteIzquierdo && x <= limiteDerecho && y >= limiteAbajo && y <= limiteArriba && distancia >= distanciaMinimaRecorrido));
             
             if (x >= limiteIzquierdo && x <= limiteDerecho && y >= limiteAbajo && y <= limiteArriba && distancia >= distanciaMinimaRecorrido && !atacando && !enMovimiento)
             {
-                Debug.Log("Objetivo valido");
                 objetivoValido = true;
                 StartCoroutine(MoverHaciaObjetivo());
             }
@@ -172,7 +170,6 @@ public class EnemigoCiego : MonoBehaviour
         Vector2 direccionFrenado = -velocidadActual.normalized;
         float fuerzaFrenado = Mathf.Clamp(frenado * velocidadMagnitud, 0f, rb.mass * frenado);
         rb.AddForce(direccionFrenado * fuerzaFrenado, ForceMode2D.Force);
-        Debug.Log("Eligiendo nuevo objetivo");
         
         sr.color = Color.white;
         if(grande)

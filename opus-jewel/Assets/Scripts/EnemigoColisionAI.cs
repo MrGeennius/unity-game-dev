@@ -9,8 +9,8 @@ public class EnemigoColisionAI : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float velocidadMovimiento = 1f;
     private float limiteAbajo=-4.6f;
-    private float limiteArriba=4.6f;
-    private float limiteIzquierdo=-31.8f;
+    private float limiteArriba=1000f;
+    private float limiteIzquierdo=-1000f;
     private float limiteDerecho=8.8f;
     private bool isOnMap = true;
 

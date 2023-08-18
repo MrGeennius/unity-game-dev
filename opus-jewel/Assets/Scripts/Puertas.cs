@@ -18,15 +18,20 @@ public class Puertas : MonoBehaviour
     void Start()
     {
         enemySpawner = GameObject.FindObjectOfType<enemySpawner>();
-        salaManager = SalaManagerReference; // Inicializa la referencia al script salaManager
-        salaManager.salaActual = salaActual;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        salaManager = SalaManagerReference; // Inicializa la referencia al script salaManager
+        salaManager.salaActual = SalaActual.salaActual;   
     }
 
 
     void Update()
-    {
+    {   
+        if (salaManager.salasDerrotadas.ContainsKey(salaActual) && !salaManager.salasDerrotadas.ContainsKey(salaDestino))
+        {
+            salaManager.salasDerrotadas.Add(salaDestino, false);
+        }
+
         if(salaManager.SalaFueDerrotada(salaActual) && cambiarColor==true)
         {
             spriteRenderer.color = Color.green;
@@ -41,25 +46,25 @@ public class Puertas : MonoBehaviour
         if (collision.CompareTag("Jugador"))
         {
             Debug.Log("Colisión detectada");
-            
-            Debug.Log("SalaManager bool sala derrotada: "+ salaManager.SalaFueDerrotada(salaActual) );
             Debug.Log(salaManager.salaActual);
             if (salaManager != null && salaManager.ganaste && PuertasManager.puedeTeletransportar && salaManager.SalaFueDerrotada(salaActual)) // Verificar si el nivel ha sido vencido
             {
-                
                 // Teletransportar al jugador a la puerta de destino
                 EnemigoMovActivoManager.puedeMoverse = false;
-                enemySpawner.sala2();
+                
                 PuertasManager.puedeTeletransportar = false;
                 collision.transform.position = puntoTeletransporte.transform.position;
-                // salaManager.terminada = true;
+                salaManager.CambiarSalaActual(salaDestino);
                 if (cameraTarget != null)
                 {
                     StartCoroutine(MoveCameraSmoothly(cameraTarget.position));
                 }
                 
                 StartCoroutine(HabilitarTeletransporte());
-                // salaManager.CambiarSalaActual(salaDestino);
+                Debug.Log("SalaManager SalasDerrotadas: " + salaManager.salasDerrotadas[salaManager.salaActual]);
+                
+                enemySpawner.sala2();
+
             }
         }
     }
@@ -82,5 +87,4 @@ public class Puertas : MonoBehaviour
         yield return new WaitForSeconds(tiempoEspera);
         PuertasManager.puedeTeletransportar = true;
     }
-
 }

@@ -86,11 +86,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
+      "projectUniqueName": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
       "projectName": "Unity.Mathematics",
-      "projectPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
+      "projectPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
       "packagesPath": "C:\\Users\\Mrgee\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\obj\\",
+      "outputPath": "C:\\Users\\Mrgee\\Documents\\GitHub\\unity-game-dev\\opus-jewel\\CSharpProjFolders\\Unity.Mathematics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mrgee\\AppData\\Roaming\\NuGet\\NuGet.Config",
