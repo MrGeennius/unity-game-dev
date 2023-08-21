@@ -72,10 +72,16 @@ public class Jugador : MonoBehaviour
     private bool bloquearAbajo = false;
     private bool bloquearDerecha = false;
     private bool bloquearIzquierda = false;
+
+    bool moviendoseAbajo;
+    bool moviendoseArriba;
+    bool moviendoseCostado;
+
     // Start is called before the first frame update
     void Start()
     {
         //INICIALZIAR COMPONENTES
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
         vidasActuales = vidasMaximas;
         textoVidas.text = vidasActuales.ToString();
@@ -92,9 +98,11 @@ public class Jugador : MonoBehaviour
     void Update()
     {
          // DISPARO
+        
         if (Input.GetMouseButtonDown(0) && Time.time>proximoDisparo){
             Disparo();
             proximoDisparo=Time.time+velocidadDisparo;
+
         }
         //FIN DISPARO
 
@@ -112,7 +120,20 @@ public class Jugador : MonoBehaviour
         // INICIO MOVIMIENTO JUGADOR
         float horizontalInput = Input.GetAxis("Horizontal") ;
         float verticalInput = Input.GetAxis("Vertical");
+        
+         moviendoseArriba = verticalInput > 0;
+         moviendoseAbajo = verticalInput < 0;
+         moviendoseCostado = horizontalInput != 0;
 
+        
+        if (EnemigoMovActivoManager.puedeMoverse)
+        {
+            
+                gameObject.GetComponent<Animator>().SetBool("moviendose_abajo", moviendoseAbajo);
+                gameObject.GetComponent<Animator>().SetBool("moviendose_arriba", moviendoseArriba);
+                gameObject.GetComponent<Animator>().SetBool("moviendose_costado", moviendoseCostado);
+            
+        }
         //BLOQUEO DE MOVIMIENTOS
         if(bloquearIzquierda && horizontalInput < 0 || !EnemigoMovActivoManager.puedeMoverse){
             horizontalInput=0;
@@ -126,21 +147,6 @@ public class Jugador : MonoBehaviour
         if(bloquearAbajo && verticalInput < 0 || !EnemigoMovActivoManager.puedeMoverse){
             verticalInput=0;
         }
-
-        Vector2 inputDirection = new Vector2(horizontalInput, verticalInput).normalized; // Normalizar el vector de entrada
-        Vector2 movement = inputDirection * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
-        transform.Translate(movement);
-        // FIN MOVIMIENTO JUGADOR
-       
-
-        // Verificar si el jugador se está moviendo
-        if(estaMoviendo = movement.magnitude > 0f){
-            gameObject.GetComponent<Animator>().SetBool("moviendose", true);
-        }
-        else{
-            gameObject.GetComponent<Animator>().SetBool("moviendose", false);
-        }
-        // Giro la animacion del personaje
         if (horizontalInput < 0)
         {
             spriteRenderer.flipX = true;
@@ -149,8 +155,25 @@ public class Jugador : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+        Vector2 inputDirection = new Vector2(horizontalInput, verticalInput).normalized; // Normalizar el vector de entrada
+        Vector2 movement = inputDirection * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
+        transform.Translate(movement);
+        // FIN MOVIMIENTO JUGADOR
+       
+
+        // Verificar si el jugador se está moviendo
+        
+        // Giro la animacion del personaje
+
     }
 
+    private IEnumerator disparando()
+    {
+        yield return new WaitForSeconds(velocidadDisparo/2);
+        gameObject.GetComponent<Animator>().ResetTrigger("disparo_arriba");
+        gameObject.GetComponent<Animator>().ResetTrigger("disparo_abajo");
+        gameObject.GetComponent<Animator>().ResetTrigger("disparo_costado");
+    }
     void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("ParedIzquierda"))
@@ -238,6 +261,7 @@ public class Jugador : MonoBehaviour
     }
     void Disparo()
     {
+
         // Obtener la dirección del disparo basada en la posición del mouse
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = -Camera.main.transform.position.z;
@@ -249,23 +273,44 @@ public class Jugador : MonoBehaviour
         int roundedAngle = Mathf.RoundToInt(angle / 45f) * 45;
         float roundedAngleRad = roundedAngle * Mathf.Deg2Rad;
         direccionDisparo = new Vector2(Mathf.Cos(roundedAngleRad), Mathf.Sin(roundedAngleRad));
-        
+    
+
         // Selecionar el punto de disparo correspondiente a la dirección redondeada
         if (direccionDisparo == Vector2.up)
         {
             PuntoDisparo = PuntoDisparoArriba;
+            gameObject.GetComponent<Animator>().SetTrigger("disparo_arriba");
+
+            StartCoroutine(disparando());
         }
         else if (direccionDisparo == Vector2.down)
         {
             PuntoDisparo = PuntoDisparoAbajo;
+            gameObject.GetComponent<Animator>().SetTrigger("disparo_abajo");
+            StartCoroutine(disparando());
         }
         else if (direccionDisparo == Vector2.left)
         {
             PuntoDisparo = PuntoDisparoIzquierda;
+            gameObject.GetComponent<Animator>().SetTrigger("disparo_costado");
+            if(spriteRenderer.flipX == false)
+            {
+                spriteRenderer.flipX = true;
+                Debug.Log("girando 1");
+            }
+            
+            StartCoroutine(disparando());
         }
         else if (direccionDisparo == Vector2.right)
         {
             PuntoDisparo = PuntoDisparoDerecha;
+            gameObject.GetComponent<Animator>().SetTrigger("disparo_costado");
+            if(spriteRenderer.flipX == true)
+            {
+                spriteRenderer.flipX = false;
+                Debug.Log("girando 2");
+            }
+            StartCoroutine(disparando());
         }
         else if (direccionDisparo == new Vector2(1, 1).normalized)
         {

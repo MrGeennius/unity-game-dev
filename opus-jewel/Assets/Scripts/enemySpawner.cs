@@ -118,6 +118,36 @@ public class enemySpawner : MonoBehaviour
             Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
             ContadorBichos++;
         }
+        if (!manager.salasDerrotadas[manager.salaActual] && manager.salaActual == "Sala4")
+        {
+            
+            Vector2 posicion = new Vector2(Random.Range(-26, -18), Random.Range(25, 29) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(25, 29) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(25, 29) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+            ContadorBichos++;
+        }
+        if (!manager.salasDerrotadas[manager.salaActual] && manager.salaActual == "Sala5")
+        {
+            
+            Vector2 posicion = new Vector2(Random.Range(-26, -18), Random.Range(25, 29) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(25, 29) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+    
+            ContadorBichos++;
+            posicion = new Vector2(Random.Range(-26, -18), Random.Range(25, 29) );
+            Instantiate(enemyNormalPrefab, posicion, Quaternion.identity);
+            ContadorBichos++;
+        }
     }
     
 
