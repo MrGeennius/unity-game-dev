@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -105,28 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_mago_arriba_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eafc6223933b7a43a9c0f46eb68115e
-      internalID: 1653919991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_mago_arriba_1
+      name: mago_ataque_derecha_0
       rect:
         serializedVersion: 2
         x: 0
@@ -140,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 835d8ba96a4c9534db977a005e6ac43e
-      internalID: -855978886
+      spriteID: 2a36975fe26f4fe45846885e5c31f51e
+      internalID: -303001400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mago_arriba_2
+      name: mago_ataque_derecha_1
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66d2b6ddd954b9d4bae1e3019c327bae
-      internalID: -238921275
+      spriteID: 2c46c98188bac914c8b2011edd6cbc33
+      internalID: -1613151053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mago_arriba_3
+      name: mago_ataque_derecha_2
       rect:
         serializedVersion: 2
         x: 0
@@ -182,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 586b76d3437fc2a4f9c653cd21078d20
-      internalID: 115300612
+      spriteID: 7fa75a1ee6689304ca44318cf840ca32
+      internalID: -31400026
       vertices: []
       indices: 
       edges: []
@@ -199,10 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_mago_arriba_0: 1653919991
-      walk_mago_arriba_1: -855978886
-      walk_mago_arriba_2: -238921275
-      walk_mago_arriba_3: 115300612
+      mago_ataque_derecha_0: -303001400
+      mago_ataque_derecha_1: -1613151053
+      mago_ataque_derecha_2: -31400026
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

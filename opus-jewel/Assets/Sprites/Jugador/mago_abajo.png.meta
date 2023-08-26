@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,28 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mago_abajo_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b020988f1cdf744daf8a8402d031867
-      internalID: -1676784959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mago_abajo_1
+      name: mago_ataque_derecha_0
       rect:
         serializedVersion: 2
         x: 0
@@ -140,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f879d5705f67dd42a8153ea440f88f6
-      internalID: -2111025571
+      spriteID: 2a36975fe26f4fe45846885e5c31f51e
+      internalID: -303001400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mago_abajo_2
+      name: mago_ataque_derecha_1
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d6bbb061d6db2a4cb6165411d8ce4ca
-      internalID: -835000355
+      spriteID: 2c46c98188bac914c8b2011edd6cbc33
+      internalID: -1613151053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mago_abajo_3
+      name: mago_ataque_derecha_2
       rect:
         serializedVersion: 2
         x: 0
@@ -182,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3500b9fdeb2d1064f9417ce95e812f5f
-      internalID: -954010745
+      spriteID: 7fa75a1ee6689304ca44318cf840ca32
+      internalID: -31400026
       vertices: []
       indices: 
       edges: []
@@ -199,10 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mago_abajo_0: -1676784959
-      mago_abajo_1: -2111025571
-      mago_abajo_2: -835000355
-      mago_abajo_3: -954010745
+      mago_ataque_derecha_0: -303001400
+      mago_ataque_derecha_1: -1613151053
+      mago_ataque_derecha_2: -31400026
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

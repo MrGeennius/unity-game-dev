@@ -26,14 +26,18 @@ public class EnemigoColisionAI : MonoBehaviour
         }
     }
 
-    void Update()
-    {   
+    void FixedUpdate()
+    {
         if (jugador != null && isOnMap==true && EnemigoMovActivoManager.puedeMoverse)
         {
             Vector2 direccion = jugador.transform.position - transform.position;
             direccion.Normalize();
             transform.Translate(direccion * velocidadMovimiento * Time.deltaTime);
         }
+    }
+    void Update()
+    {   
+        
     }
 
     private bool CheckIfOnMap()

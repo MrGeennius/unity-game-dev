@@ -76,7 +76,12 @@ public class Jugador : MonoBehaviour
     bool moviendoseAbajo;
     bool moviendoseArriba;
     bool moviendoseCostado;
-
+    bool disparandoArriba = false;
+    bool disparandoAbajo = false;
+    bool disparandoCostado = false;
+    bool disparo = false;
+    bool girar = false;
+    bool girarizq = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -121,17 +126,20 @@ public class Jugador : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal") ;
         float verticalInput = Input.GetAxis("Vertical");
         
-         moviendoseArriba = verticalInput > 0;
-         moviendoseAbajo = verticalInput < 0;
-         moviendoseCostado = horizontalInput != 0;
+         if (EnemigoMovActivoManager.puedeMoverse && !disparo)
+         {
+            
+         }
 
         
-        if (EnemigoMovActivoManager.puedeMoverse)
+        if (EnemigoMovActivoManager.puedeMoverse && !disparo)
         {
             
-                gameObject.GetComponent<Animator>().SetBool("moviendose_abajo", moviendoseAbajo);
-                gameObject.GetComponent<Animator>().SetBool("moviendose_arriba", moviendoseArriba);
-                gameObject.GetComponent<Animator>().SetBool("moviendose_costado", moviendoseCostado);
+   
+                        gameObject.GetComponent<Animator>().SetBool("moviendose_abajo", moviendoseAbajo);     
+                        gameObject.GetComponent<Animator>().SetBool("moviendose_arriba", moviendoseArriba);       
+                        gameObject.GetComponent<Animator>().SetBool("moviendose_costado", moviendoseCostado);
+
             
         }
         //BLOQUEO DE MOVIMIENTOS
@@ -147,23 +155,27 @@ public class Jugador : MonoBehaviour
         if(bloquearAbajo && verticalInput < 0 || !EnemigoMovActivoManager.puedeMoverse){
             verticalInput=0;
         }
-        if (horizontalInput < 0)
+        if (horizontalInput < 0 && !girarizq)
         {
             spriteRenderer.flipX = true;
+            Debug.Log("Girando 1");
         }
-        else if (horizontalInput > 0)
+        else if (horizontalInput > 0 && !girar) 
         {
             spriteRenderer.flipX = false;
+            Debug.Log("Girando 2");
         }
+
+        moviendoseArriba = verticalInput > 0;
+        moviendoseAbajo = verticalInput < 0;
+        moviendoseCostado = horizontalInput != 0;
+
         Vector2 inputDirection = new Vector2(horizontalInput, verticalInput).normalized; // Normalizar el vector de entrada
         Vector2 movement = inputDirection * (velocidadMovimientoInicial * velocidadMovimiento) * Time.deltaTime;
         transform.Translate(movement);
         // FIN MOVIMIENTO JUGADOR
        
 
-        // Verificar si el jugador se está moviendo
-        
-        // Giro la animacion del personaje
 
     }
 
@@ -173,6 +185,10 @@ public class Jugador : MonoBehaviour
         gameObject.GetComponent<Animator>().ResetTrigger("disparo_arriba");
         gameObject.GetComponent<Animator>().ResetTrigger("disparo_abajo");
         gameObject.GetComponent<Animator>().ResetTrigger("disparo_costado");
+        gameObject.GetComponent<Animator>().SetBool("disparando", false);
+        disparo = false;
+        girar = false;
+        girarizq = false;
     }
     void OnCollisionStay2D(Collision2D collision)
         {
@@ -278,36 +294,47 @@ public class Jugador : MonoBehaviour
         // Selecionar el punto de disparo correspondiente a la dirección redondeada
         if (direccionDisparo == Vector2.up)
         {
+            disparo = true;
             PuntoDisparo = PuntoDisparoArriba;
             gameObject.GetComponent<Animator>().SetTrigger("disparo_arriba");
-
+            gameObject.GetComponent<Animator>().SetBool("disparando", disparo);
+            
             StartCoroutine(disparando());
         }
         else if (direccionDisparo == Vector2.down)
         {
+            disparo = true;
             PuntoDisparo = PuntoDisparoAbajo;
             gameObject.GetComponent<Animator>().SetTrigger("disparo_abajo");
+            gameObject.GetComponent<Animator>().SetBool("disparando", disparo);
+            
             StartCoroutine(disparando());
         }
         else if (direccionDisparo == Vector2.left)
         {
+            disparo = true;
             PuntoDisparo = PuntoDisparoIzquierda;
             gameObject.GetComponent<Animator>().SetTrigger("disparo_costado");
+            gameObject.GetComponent<Animator>().SetBool("disparando", disparo);
+            
             if(spriteRenderer.flipX == false)
             {
                 spriteRenderer.flipX = true;
+                girar = true;
                 Debug.Log("girando 1");
             }
-            
             StartCoroutine(disparando());
         }
         else if (direccionDisparo == Vector2.right)
         {
             PuntoDisparo = PuntoDisparoDerecha;
             gameObject.GetComponent<Animator>().SetTrigger("disparo_costado");
+            gameObject.GetComponent<Animator>().SetBool("disparando", true);
+            disparo = true;
             if(spriteRenderer.flipX == true)
             {
                 spriteRenderer.flipX = false;
+                girarizq = true;
                 Debug.Log("girando 2");
             }
             StartCoroutine(disparando());
